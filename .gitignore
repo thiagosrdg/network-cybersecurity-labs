@@ -1,0 +1,32 @@
+# Arquivos temporários e de sistema operacional
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+*.bak
+*.swp
+
+# Configurações locais de IDE
+.vscode/
+.idea/
+*.iml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+
+# Capturas grandes ou sensíveis
+# Capturas anonimizadas e de tamanho razoável podem ser versionadas
+# normalmente dentro de labs/**/captures/. Os padrões abaixo evitam
+# o versionamento acidental de material bruto, privado ou sensível.
+*.private.pcap
+*.private.pcapng
+*.sensitive.pcap
+*.sensitive.pcapng
+captures/raw/
+*.pcapng.gz
+*.pcap.gz
