@@ -58,7 +58,7 @@ Antes de publicar qualquer captura ou evidência, anonimize:
 - Mantenha arquivos de captura brutos (não anonimizados) fora do controle
   de versão, em local seguro e com acesso restrito.
 - Apenas versione capturas **já revisadas e anonimizadas**.
-- Utilize os padrões definidos em [.gitignore](../.gitignore) para evitar o
+- Utilize os padrões definidos em [.gitignore](../../.gitignore) para evitar o
   versionamento acidental de arquivos sensíveis (ex.: `*.private.pcap`,
   `*.sensitive.pcapng`, `captures/raw/`).
 
@@ -90,4 +90,4 @@ Antes de cada commit que inclua arquivos de captura ou screenshots:
    quando necessário, utilize amostras representativas e menores do
    tráfego relevante.
 4. Em caso de dúvida sobre a sensibilidade de um dado, **não publique** e
-   consulte [SECURITY.md](../SECURITY.md).
+   consulte [SECURITY.md](../../SECURITY.md).

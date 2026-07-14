@@ -19,7 +19,7 @@ __pycache__/
 venv/
 .env
 
-# Capturas grandes ou sensíveis
+# Capturas grandes ou sensíveis (track wireshark/)
 # Capturas anonimizadas e de tamanho razoável podem ser versionadas
 # normalmente dentro de labs/**/captures/. Os padrões abaixo evitam
 # o versionamento acidental de material bruto, privado ou sensível.
@@ -30,3 +30,12 @@ venv/
 captures/raw/
 *.pcapng.gz
 *.pcap.gz
+
+# Saídas de scan grandes ou sensíveis (track nmap/)
+# O mesmo princípio se aplica a labs/**/outputs/: apenas saídas já
+# revisadas e anonimizadas devem ser versionadas.
+*.private.xml
+*.private.gnmap
+*.sensitive.xml
+*.sensitive.gnmap
+outputs/raw/

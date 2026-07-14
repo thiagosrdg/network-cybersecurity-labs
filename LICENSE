@@ -23,9 +23,11 @@ SOFTWARE.
 ---
 
 Nota: esta licença MIT cobre o código, os templates e a estrutura deste
-repositório. Arquivos de captura (`.pcap`/`.pcapng`), screenshots e outros
-materiais externos eventualmente adicionados podem estar sujeitos a
-condições específicas de uso e distribuição, descritas em
-[docs/packet-capture-safety.md](docs/packet-capture-safety.md). Esses
-materiais só devem ser publicados quando houver autorização explícita para
-sua distribuição.
+repositório. Arquivos de captura (`.pcap`/`.pcapng`), saídas de
+ferramentas de scanning, screenshots e outros materiais externos
+eventualmente adicionados podem estar sujeitos a condições específicas de
+uso e distribuição, descritas nas orientações de segurança de cada track
+(ex.: [wireshark/docs/packet-capture-safety.md](wireshark/docs/packet-capture-safety.md),
+[nmap/docs/scanning-safety-and-ethics.md](nmap/docs/scanning-safety-and-ethics.md)).
+Esses materiais só devem ser publicados quando houver autorização
+explícita para sua distribuição.
