@@ -28,6 +28,7 @@ outputs, screenshots, and other external materials that may be added
 over time can be subject to specific usage and distribution
 conditions, described in each track's security guidelines (e.g.,
 [wireshark/docs/packet-capture-safety.md](wireshark/docs/packet-capture-safety.md),
-[nmap/docs/scanning-safety-and-ethics.md](nmap/docs/scanning-safety-and-ethics.md)).
+[nmap/docs/scanning-safety-and-ethics.md](nmap/docs/scanning-safety-and-ethics.md),
+[tcpdump/docs/packet-capture-safety.md](tcpdump/docs/packet-capture-safety.md)).
 Such materials should only be published when there is explicit
 authorization for their distribution.

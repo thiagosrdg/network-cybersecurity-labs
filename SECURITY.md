@@ -4,9 +4,9 @@
 
 **Network & Cybersecurity Labs** is a repository with an **exclusively
 educational and defensive** purpose, created to document networking and
-cybersecurity labs organized by track (e.g., `wireshark/`, `nmap/`). It
-is not intended to store, distribute, or promote offensive techniques
-against third-party systems.
+cybersecurity labs organized by track (e.g., `wireshark/`, `nmap/`,
+`tcpdump/`). It is not intended to store, distribute, or promote
+offensive techniques against third-party systems.
 
 ## Reporting vulnerabilities or sensitive data
 
@@ -32,6 +32,7 @@ profile" section), describing the issue briefly.
   each track's guidelines:
   - [wireshark/docs/packet-capture-safety.md](wireshark/docs/packet-capture-safety.md)
   - [nmap/docs/scanning-safety-and-ethics.md](nmap/docs/scanning-safety-and-ethics.md)
+  - [tcpdump/docs/packet-capture-safety.md](tcpdump/docs/packet-capture-safety.md)
 - Screenshots must be reviewed to ensure they do not expose personal
   public IPs, real hostnames, e-mails, tokens, or other identifiable
   data.

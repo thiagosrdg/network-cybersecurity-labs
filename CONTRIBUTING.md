@@ -2,9 +2,9 @@
 
 Thank you for considering contributing to **Network & Cybersecurity
 Labs**. This is a personal study and portfolio repository, organized
-into tracks by tool/topic (e.g., `wireshark/`, `nmap/`), but
-suggestions, technical corrections, and documentation improvements are
-welcome.
+into tracks by tool/topic (e.g., `wireshark/`, `nmap/`, `tcpdump/`),
+but suggestions, technical corrections, and documentation improvements
+are welcome.
 
 ## Naming convention
 
@@ -12,18 +12,18 @@ welcome.
   (e.g., `dns-analysis`, `packet-capture-safety.md`).
 - New tracks should be created as a folder at the root of the
   repository, with the tool/topic name in lowercase (e.g., `zeek/`,
-  `tcpdump/`).
+  `log-analysis/`).
 - Within each track, new labs should follow the `NN-lab-name` pattern,
   with a two-digit sequential number (e.g., `06-arp-spoofing-detection`).
 - Each lab must keep the appropriate evidence subdirectories (e.g.,
-  `captures/` and `screenshots/` in the Wireshark track; `outputs/` and
-  `screenshots/` in the Nmap track), even if initially empty (use
-  `.gitkeep`).
+  `captures/` and `screenshots/` in the Wireshark and tcpdump tracks;
+  `outputs/` and `screenshots/` in the Nmap track), even if initially
+  empty (use `.gitkeep`).
 
 ## Structure of a new track
 
 When creating a new track, follow the same organization already used
-in `wireshark/` and `nmap/`:
+in `wireshark/`, `nmap/`, and `tcpdump/`:
 
 ```text
 track-name/
@@ -42,7 +42,8 @@ Add the new track to the "Tracks" table in the
 - Every lab must follow the structure defined in the respective
   track's `lab-template.md` (e.g.,
   [wireshark/templates/lab-template.md](wireshark/templates/lab-template.md),
-  [nmap/templates/lab-template.md](nmap/templates/lab-template.md)).
+  [nmap/templates/lab-template.md](nmap/templates/lab-template.md),
+  [tcpdump/templates/lab-template.md](tcpdump/templates/lab-template.md)).
 - Documentation must be written in **English**, with clear and
   objective technical language.
 - Do not record results, captures, scan outputs, or conclusions for
@@ -55,7 +56,8 @@ Add the new track to the "Tracks" table in the
 - Before adding any `.pcap`, `.pcapng`, scan output, or screenshot
   file, follow the respective track's security guidelines (e.g.,
   [wireshark/docs/packet-capture-safety.md](wireshark/docs/packet-capture-safety.md),
-  [nmap/docs/scanning-safety-and-ethics.md](nmap/docs/scanning-safety-and-ethics.md)).
+  [nmap/docs/scanning-safety-and-ethics.md](nmap/docs/scanning-safety-and-ethics.md),
+  [tcpdump/docs/packet-capture-safety.md](tcpdump/docs/packet-capture-safety.md)).
 - Never include personal public IPs, credentials, cookies, tokens, or
   third-party data.
 - Prefer generating synthetic traffic or results in controlled, owned

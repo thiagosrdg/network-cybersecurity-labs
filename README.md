@@ -32,10 +32,11 @@ reproducibly — always in owned or explicitly authorized environments.
 |---|---|---|---|
 | [wireshark/](wireshark/README.md) | Wireshark | Network traffic analysis, protocols, and packet investigation | `In progress` |
 | [nmap/](nmap/README.md) | Nmap | Network discovery, port scanning, and service enumeration | `Planned` |
+| [tcpdump/](tcpdump/README.md) | tcpdump | Command-line packet capture and BPF filters | `Planned` |
 
 New tracks can be added at any time — just create a new folder at the
-root of the repository (e.g., `zeek/`, `tcpdump/`, `log-analysis/`)
-following the same organization pattern described below.
+root of the repository (e.g., `zeek/`, `log-analysis/`) following the
+same organization pattern described below.
 
 ## Repository structure
 
@@ -52,7 +53,13 @@ network-cybersecurity-labs/
 │   ├── labs/
 │   ├── templates/
 │   └── resources/
-└── nmap/                    # Scanning and enumeration track with Nmap
+├── nmap/                    # Scanning and enumeration track with Nmap
+│   ├── README.md
+│   ├── docs/
+│   ├── labs/
+│   ├── templates/
+│   └── resources/
+└── tcpdump/                 # Command-line capture track with tcpdump
     ├── README.md
     ├── docs/
     ├── labs/
@@ -80,6 +87,7 @@ are unique and shared across all tracks.
 - Practical understanding of TCP/IP protocols (Ethernet, ARP,
   IPv4/IPv6, ICMP, TCP, UDP, DNS, HTTP).
 - Use of capture filters and display filters in Wireshark.
+- Command-line packet capture and BPF filters with tcpdump.
 - Network reconnaissance and service enumeration with Nmap.
 - Network troubleshooting from technical evidence.
 - Initial identification of suspicious traffic and indicators of
@@ -124,10 +132,11 @@ See the detailed methodology for each track in
 > anonymization guidelines — see:
 > - [wireshark/docs/packet-capture-safety.md](wireshark/docs/packet-capture-safety.md)
 > - [nmap/docs/scanning-safety-and-ethics.md](nmap/docs/scanning-safety-and-ethics.md)
+> - [tcpdump/docs/packet-capture-safety.md](tcpdump/docs/packet-capture-safety.md)
 
 ## Instructions to run or reproduce the labs
 
-1. Choose the desired track (`wireshark/` or `nmap/`).
+1. Choose the desired track (`wireshark/`, `nmap/`, or `tcpdump/`).
 2. Read the track's `README.md` to understand objectives and
    prerequisites.
 3. Set up an isolated environment you own (virtual machine or virtual
@@ -142,18 +151,21 @@ See the detailed methodology for each track in
 
 This repository is in the structuring phase. The `wireshark/` track has
 the base documentation for five labs created, still **with no real
-captures or results recorded**. The `nmap/` track was just created,
-with the base structure and one initial lab planned. The progress of
-each lab is tracked via the `Status` field in its respective
-`README.md`.
+captures or results recorded**. The `nmap/` and `tcpdump/` tracks were
+just created, each with the base structure and one initial lab
+planned. The progress of each lab is tracked via the `Status` field in
+its respective `README.md`.
 
 ## Next steps
 
-- Run and document the first real labs in `wireshark/` and `nmap/`.
+- Run and document the first real labs in `wireshark/`, `nmap/`, and
+  `tcpdump/`.
 - Expand the `nmap/` track with service/version detection, OS
   detection, and NSE labs.
-- Consider creating new tracks (e.g., `tcpdump/`, `zeek/`,
-  `log-analysis/`) as new labs are performed.
+- Expand the `tcpdump/` track with remote/SSH captures and rotating
+  capture files.
+- Consider creating new tracks (e.g., `zeek/`, `log-analysis/`) as new
+  labs are performed.
 
 ## Commit convention
 
