@@ -38,8 +38,6 @@ network-cybersecurity-labs/
 ├── README.md               # This file — general index of the repository
 ├── LICENSE
 ├── .gitignore
-├── CONTRIBUTING.md
-├── SECURITY.md
 ├── wireshark/               # Traffic analysis track with Wireshark
 │   ├── README.md
 │   ├── docs/
@@ -71,8 +69,8 @@ Each track follows the same internal organization:
 - `templates/` — reusable templates for new labs.
 - `resources/` — quick references, filters, and useful commands.
 
-The `LICENSE`, `.gitignore`, `CONTRIBUTING.md`, and `SECURITY.md` files
-are unique and shared across all tracks.
+The `LICENSE` and `.gitignore` files are unique and shared across all
+tracks.
 
 ## Skills demonstrated
 
@@ -115,6 +113,18 @@ type of evidence analyzed, but all of them share the same principles:
 > This repository has an **exclusively educational and defensive**
 > purpose. None of the labs documented here are intended to compromise
 > third-party systems.
+
+## Security
+
+This repository has an exclusively educational and defensive purpose
+and does not host production applications or real user data.
+Capture files, scan outputs, and screenshots must be reviewed before
+being committed to ensure they contain no personal public IPs, real
+hostnames, credentials, cookies, tokens, or other sensitive
+information. If sensitive data is found after a merge, it will be
+removed from the history as soon as possible. Do not open a public
+issue describing suspected sensitive data or vulnerabilities in
+detail — report it privately to the maintainer instead.
 
 ## Instructions to run or reproduce the labs
 
