@@ -4,51 +4,52 @@
 
 Planned
 
-## Objetivo
+## Objective
 
-Aplicar uma metodologia inicial de investigação de tráfego para
-identificar conexões incomuns, observando portas, hosts, frequência de
-comunicação, retransmissões e padrões anormais. O laboratório busca
-documentar hipóteses de forma responsável, sem afirmar conclusões sem
-evidências suficientes.
+Apply an initial traffic investigation methodology to identify unusual
+connections, observing ports, hosts, communication frequency,
+retransmissions, and abnormal patterns. The lab aims to document
+hypotheses responsibly, without asserting conclusions without
+sufficient evidence.
 
-## Conceitos abordados
+## Concepts covered
 
-- Metodologia de investigação de tráfego (ver
+- Traffic investigation methodology (see
   [docs/network-analysis-methodology.md](../../docs/network-analysis-methodology.md)).
-- Diferença entre fato observado, hipótese, inferência e conclusão
-  confirmada (ver
+- Difference between observed fact, hypothesis, inference, and
+  confirmed conclusion (see
   [templates/incident-analysis-template.md](../../templates/incident-analysis-template.md)).
-- Indicadores técnicos de possível comportamento suspeito (portas
-  incomuns, RSTs frequentes, retransmissões, respostas DNS com erro).
-- Limitações da análise baseada apenas em captura de pacotes.
+- Technical indicators of possible suspicious behavior (unusual ports,
+  frequent RSTs, retransmissions, DNS error responses).
+- Limitations of an analysis based solely on packet capture.
 
-## Ambiente
+## Environment
 
-- Sistema operacional: `<preencher>`
-- Versão do Wireshark: `<preencher>`
-- Interface de rede: `<preencher>`
-- Topologia: `<preencher>`
-- Máquinas virtuais: `<preencher>`
-- Ferramentas auxiliares: `<preencher>`
+- Operating system: `<fill in>`
+- Wireshark version: `<fill in>`
+- Network interface: `<fill in>`
+- Topology: `<fill in>`
+- Virtual machines: `<fill in>`
+- Auxiliary tools: `<fill in>`
 
-## Cenário
+## Scenario
 
-`<Descrever o cenário utilizado para gerar ou obter o tráfego analisado,
-deixando explícito que se trata de um ambiente de laboratório controlado
-e/ou de tráfego sintético gerado para fins de estudo.>`
+`<Describe the scenario used to generate or obtain the analyzed
+traffic, making it explicit that it is a controlled lab environment
+and/or synthetic traffic generated for study purposes.>`
 
-## Procedimento
+## Procedure
 
-`<Descrever, passo a passo, como a captura foi realizada e como a
-investigação foi conduzida, incluindo a ordem de aplicação dos filtros.>`
+`<Describe, step by step, how the capture was performed and how the
+investigation was conducted, including the order in which filters were
+applied.>`
 
-## Filtros utilizados
+## Filters used
 
 ### Capture filters
 
 ```text
-Adicionar filtros de captura aqui, caso utilizados.
+Add capture filters here, if used.
 ```
 
 ### Display filters
@@ -62,45 +63,44 @@ tcp.port == 8080
 frame.len > 1500
 ```
 
-## Análise dos pacotes
+## Packet analysis
 
-`<Documentar aqui os pacotes relevantes observados durante a execução real
-do laboratório, aplicando a metodologia de análise progressiva descrita em
-docs/network-analysis-methodology.md.>`
+`<Document here the relevant packets observed during the actual
+execution of the lab, applying the progressive analysis methodology
+described in docs/network-analysis-methodology.md.>`
 
-## Evidências
+## Evidence
 
-`<Adicionar screenshots anonimizadas em screenshots/ e referenciar os
-arquivos de captura correspondentes em captures/ quando o laboratório for
-executado.>`
+`<Add anonymized screenshots in screenshots/ and reference the
+corresponding capture files in captures/ once the lab is performed.>`
 
-## Principais descobertas
+## Key findings
 
-`<Preencher após a execução do laboratório, classificando cada descoberta
-como fato observado, hipótese, inferência ou conclusão confirmada.>`
+`<Fill in after the lab is performed, classifying each finding as an
+observed fact, hypothesis, inference, or confirmed conclusion.>`
 
-## Indicadores de comportamento suspeito
+## Indicators of suspicious behavior
 
-`<Preencher, se aplicável, após a execução do laboratório.>`
+`<Fill in, if applicable, after the lab is performed.>`
 
-> **Observação importante**: o uso de uma porta específica (ex.: 4444 ou
-> 8080) **não comprova**, isoladamente, atividade maliciosa. Portas
-> incomuns são apenas um ponto de partida para investigação — todo
-> indicador deve ser analisado dentro do contexto completo da comunicação
-> (hosts envolvidos, volume de tráfego, protocolo real utilizado,
-> frequência e demais evidências).
+> **Important note**: using a specific port (e.g., 4444 or 8080)
+> **does not prove**, on its own, malicious activity. Unusual ports
+> are only a starting point for investigation — every indicator must
+> be analyzed within the full context of the communication (hosts
+> involved, traffic volume, the actual protocol used, frequency, and
+> other evidence).
 
-## Mitigações ou recomendações
+## Mitigations or recommendations
 
-`<Preencher, se aplicável, após a execução do laboratório.>`
+`<Fill in, if applicable, after the lab is performed.>`
 
-## Conclusão
+## Conclusion
 
-`<Preencher após a execução do laboratório, deixando claro o nível de
-confiança nas conclusões apresentadas.>`
+`<Fill in after the lab is performed, clearly stating the confidence
+level of the conclusions presented.>`
 
-## Referências
+## References
 
-- [Documentação oficial do Wireshark](https://www.wireshark.org/docs/)
+- [Official Wireshark documentation](https://www.wireshark.org/docs/)
 - [docs/network-analysis-methodology.md](../../docs/network-analysis-methodology.md)
 - [templates/incident-analysis-template.md](../../templates/incident-analysis-template.md)

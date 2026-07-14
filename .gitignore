@@ -1,4 +1,4 @@
-# Arquivos temporários e de sistema operacional
+# Temporary and operating system files
 .DS_Store
 Thumbs.db
 *.tmp
@@ -6,7 +6,7 @@ Thumbs.db
 *.bak
 *.swp
 
-# Configurações locais de IDE
+# Local IDE settings
 .vscode/
 .idea/
 *.iml
@@ -19,10 +19,10 @@ __pycache__/
 venv/
 .env
 
-# Capturas grandes ou sensíveis (track wireshark/)
-# Capturas anonimizadas e de tamanho razoável podem ser versionadas
-# normalmente dentro de labs/**/captures/. Os padrões abaixo evitam
-# o versionamento acidental de material bruto, privado ou sensível.
+# Large or sensitive captures (wireshark/ track)
+# Anonymized, reasonably sized captures can be versioned normally
+# inside labs/**/captures/. The patterns below prevent the accidental
+# versioning of raw, private, or sensitive material.
 *.private.pcap
 *.private.pcapng
 *.sensitive.pcap
@@ -31,9 +31,9 @@ captures/raw/
 *.pcapng.gz
 *.pcap.gz
 
-# Saídas de scan grandes ou sensíveis (track nmap/)
-# O mesmo princípio se aplica a labs/**/outputs/: apenas saídas já
-# revisadas e anonimizadas devem ser versionadas.
+# Large or sensitive scan outputs (nmap/ track)
+# The same principle applies to labs/**/outputs/: only already
+# reviewed and anonymized outputs should be versioned.
 *.private.xml
 *.private.gnmap
 *.sensitive.xml

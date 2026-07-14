@@ -1,86 +1,82 @@
-# Glossário
+# Glossary
 
-Termos técnicos utilizados ao longo deste repositório, com definições
-resumidas para referência rápida.
+Technical terms used throughout this repository, with brief
+definitions for quick reference.
 
-**Packet (pacote)**
-Unidade de dados transmitida em uma rede na camada de rede (IP), composta
-por cabeçalho e payload.
+**Packet**
+Unit of data transmitted on a network at the network layer (IP),
+composed of a header and a payload.
 
-**Frame (quadro)**
-Unidade de dados na camada de enlace (ex.: Ethernet), que encapsula um
-pacote IP para transmissão física na rede.
+**Frame**
+Unit of data at the data link layer (e.g., Ethernet), which
+encapsulates an IP packet for physical transmission on the network.
 
-**Capture (captura)**
-Processo de interceptar e registrar o tráfego de rede que passa por uma
-interface, geralmente salvo em um arquivo `.pcap` ou `.pcapng`.
+**Capture**
+The process of intercepting and recording network traffic passing
+through an interface, usually saved to a `.pcap` or `.pcapng` file.
 
-**Protocol (protocolo)**
-Conjunto de regras que define como os dados são formatados, transmitidos e
-interpretados entre dispositivos em uma rede (ex.: TCP, DNS, HTTP).
+**Protocol**
+A set of rules that defines how data is formatted, transmitted, and
+interpreted between devices on a network (e.g., TCP, DNS, HTTP).
 
-**Port (porta)**
-Número que identifica um serviço ou aplicação específica em um host,
-utilizado junto ao endereço IP para endereçar comunicações (ex.: porta 443
-para HTTPS).
+**Port**
+A number that identifies a specific service or application on a host,
+used together with the IP address to address communications (e.g.,
+port 443 for HTTPS).
 
 **Socket**
-Combinação de endereço IP e porta que identifica de forma única um ponto
-de comunicação em uma conexão de rede.
+The combination of an IP address and a port that uniquely identifies a
+communication endpoint in a network connection.
 
 **Payload**
-Dados efetivamente transportados por um pacote ou frame, excluindo os
-cabeçalhos de protocolo.
+The data actually carried by a packet or frame, excluding protocol
+headers.
 
-**Header (cabeçalho)**
-Parte inicial de um pacote ou frame que contém metadados de controle
-(endereços, flags, tamanhos etc.), utilizados pelos protocolos para
-processar a comunicação.
+**Header**
+The initial part of a packet or frame that contains control metadata
+(addresses, flags, sizes, etc.), used by protocols to process the
+communication.
 
 **Three-way handshake**
-Processo de estabelecimento de uma conexão TCP, composto pelas etapas
-SYN, SYN-ACK e ACK.
+The process of establishing a TCP connection, made up of the SYN,
+SYN-ACK, and ACK steps.
 
-**Retransmission (retransmissão)**
-Reenvio de um segmento TCP que não teve sua confirmação (ACK) recebida a
-tempo, indicando possível perda de pacote na rede.
+**Retransmission**
+The resending of a TCP segment whose acknowledgment (ACK) was not
+received in time, indicating possible packet loss on the network.
 
 **TTL (Time to Live)**
-Campo do cabeçalho IP que limita o número de saltos (hops) que um pacote
-pode percorrer antes de ser descartado, evitando loops infinitos de
-roteamento.
+An IP header field that limits the number of hops a packet can travel
+before being discarded, preventing infinite routing loops.
 
-**DNS query (consulta DNS)**
-Requisição enviada por um cliente a um servidor DNS solicitando a
-resolução de um nome (ex.: para um endereço IP).
+**DNS query**
+A request sent by a client to a DNS server asking for a name to be
+resolved (e.g., to an IP address).
 
-**DNS response (resposta DNS)**
-Resposta enviada por um servidor DNS a uma consulta, contendo o resultado
-da resolução ou um código de erro.
+**DNS response**
+A response sent by a DNS server to a query, containing the resolution
+result or an error code.
 
-**Display filter (filtro de exibição)**
-Filtro aplicado no Wireshark após a captura, para exibir apenas pacotes
-que atendam a determinados critérios, sem alterar os dados capturados.
+**Display filter**
+A filter applied in Wireshark after capture, to show only packets that
+match certain criteria, without altering the captured data.
 
-**Capture filter (filtro de captura)**
-Filtro aplicado antes ou durante a captura, baseado em sintaxe BPF, que
-determina quais pacotes serão efetivamente capturados e gravados.
+**Capture filter**
+A filter applied before or during capture, based on BPF syntax, that
+determines which packets are actually captured and recorded.
 
 **PCAP**
-Formato de arquivo tradicional para armazenamento de capturas de tráfego
-de rede.
+The traditional file format for storing network traffic captures.
 
 **PCAPNG**
-Formato de arquivo mais moderno para capturas de tráfego, sucessor do
-PCAP, com suporte a múltiplas interfaces, comentários e metadados
-adicionais.
+A more modern capture file format, successor to PCAP, with support for
+multiple interfaces, comments, and additional metadata.
 
-**Network forensics (perícia de rede)**
-Área da segurança da informação voltada à captura, preservação e análise
-de tráfego de rede como evidência, com o objetivo de investigar incidentes
-de segurança.
+**Network forensics**
+The area of information security focused on capturing, preserving, and
+analyzing network traffic as evidence, with the goal of investigating
+security incidents.
 
-**Indicator of Compromise (IoC / indicador de comprometimento)**
-Evidência técnica (ex.: endereço IP, domínio, padrão de tráfego) que
-sugere a ocorrência de uma atividade maliciosa ou de um possível
-comprometimento de sistema.
+**Indicator of Compromise (IoC)**
+Technical evidence (e.g., IP address, domain, traffic pattern) that
+suggests malicious activity or a possible system compromise.

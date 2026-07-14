@@ -4,47 +4,48 @@
 
 Planned
 
-## Objetivo
+## Objective
 
-Realizar a descoberta de hosts ativos em uma rede de laboratório e
-executar uma varredura básica de portas TCP, identificando portas
-abertas, fechadas e filtradas, e compreendendo a diferença entre os
-principais tipos de scan.
+Perform discovery of active hosts on a lab network and run a basic TCP
+port scan, identifying open, closed, and filtered ports, and
+understanding the difference between the main scan types.
 
-## Conceitos abordados
+## Concepts covered
 
 - Host discovery (`-sn`).
 - TCP connect scan (`-sT`) vs. SYN scan (`-sS`).
-- Estados de porta: `open`, `closed`, `filtered`.
-- Interpretação básica da saída do Nmap.
-- Relação entre um SYN scan e o *three-way handshake* do TCP (ver também
-  o track [wireshark](../../../wireshark/labs/03-tcp-three-way-handshake/README.md)).
+- Port states: `open`, `closed`, `filtered`.
+- Basic interpretation of Nmap output.
+- Relationship between a SYN scan and the TCP *three-way handshake*
+  (see also the
+  [wireshark](../../../wireshark/labs/03-tcp-three-way-handshake/README.md)
+  track).
 
-## Ambiente
+## Environment
 
-- Sistema operacional (host de scanning): `<preencher>`
-- Versão do Nmap: `<preencher>`
-- Alvo(s) do scan (ambiente próprio/autorizado): `<preencher>`
-- Topologia: `<preencher>`
-- Máquinas virtuais: `<preencher>`
-- Ferramentas auxiliares: `<preencher>`
+- Operating system (scanning host): `<fill in>`
+- Nmap version: `<fill in>`
+- Scan target(s) (owned/authorized environment): `<fill in>`
+- Topology: `<fill in>`
+- Virtual machines: `<fill in>`
+- Auxiliary tools: `<fill in>`
 
-## Autorização
+## Authorization
 
-`<Confirmar explicitamente que o alvo do scan é um ambiente próprio ou
-possui autorização documentada, conforme
+`<Explicitly confirm that the scan target is an owned environment or
+has documented authorization, as described in
 docs/scanning-safety-and-ethics.md.>`
 
-## Cenário
+## Scenario
 
-`<Descrever o cenário utilizado, por exemplo, uma rede de laboratório
-isolada com uma ou mais máquinas virtuais próprias como alvo.>`
+`<Describe the scenario used, for example, an isolated lab network
+with one or more owned virtual machines as the target.>`
 
-## Procedimento
+## Procedure
 
-`<Descrever, passo a passo, como o laboratório foi executado.>`
+`<Describe, step by step, how the lab was performed.>`
 
-## Comandos utilizados
+## Commands used
 
 ```text
 nmap -sn 192.168.1.0/24
@@ -52,37 +53,36 @@ nmap -sT 192.168.1.10
 nmap -p- 192.168.1.10
 ```
 
-## Análise dos resultados
+## Result analysis
 
-`<Documentar aqui os resultados relevantes observados durante a execução
-real do laboratório: hosts descobertos, portas identificadas e seus
-estados.>`
+`<Document here the relevant results observed during the actual
+execution of the lab: hosts discovered, ports identified, and their
+states.>`
 
-## Evidências
+## Evidence
 
-`<Adicionar screenshots anonimizadas em screenshots/ e referenciar os
-arquivos de saída correspondentes em outputs/ quando o laboratório for
-executado.>`
+`<Add anonymized screenshots in screenshots/ and reference the
+corresponding output files in outputs/ once the lab is performed.>`
 
-## Principais descobertas
+## Key findings
 
-`<Preencher após a execução do laboratório.>`
+`<Fill in after the lab is performed.>`
 
-## Indicadores de comportamento suspeito
+## Indicators of suspicious behavior
 
-`<Preencher, se aplicável — por exemplo, serviços inesperados em portas
-não usuais.>`
+`<Fill in, if applicable — for example, unexpected services on
+unusual ports.>`
 
-## Mitigações ou recomendações
+## Mitigations or recommendations
 
-`<Preencher, se aplicável, após a execução do laboratório.>`
+`<Fill in, if applicable, after the lab is performed.>`
 
-## Conclusão
+## Conclusion
 
-`<Preencher após a execução do laboratório.>`
+`<Fill in after the lab is performed.>`
 
-## Referências
+## References
 
-- [Documentação oficial do Nmap](https://nmap.org/book/man.html)
+- [Official Nmap documentation](https://nmap.org/book/man.html)
 - [nmap/docs/scanning-safety-and-ethics.md](../../docs/scanning-safety-and-ethics.md)
 - [nmap/resources/useful-commands.md](../../resources/useful-commands.md)

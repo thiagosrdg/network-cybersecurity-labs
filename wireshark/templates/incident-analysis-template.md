@@ -1,108 +1,109 @@
-# Template de Análise de Incidente
+# Incident Analysis Template
 
-Este template auxilia na documentação estruturada de uma análise de
-tráfego voltada à investigação de um possível incidente. Ele complementa o
-[template de laboratório](lab-template.md) e segue a
-[metodologia de análise de tráfego](../docs/network-analysis-methodology.md)
-deste repositório.
+This template helps structure the documentation of a traffic analysis
+aimed at investigating a possible incident. It complements the
+[lab template](lab-template.md) and follows this repository's
+[traffic analysis methodology](../docs/network-analysis-methodology.md).
 
-> **Importante**: distinga sempre entre **fato observado**, **hipótese**,
-> **inferência** e **conclusão confirmada** (ver seção específica ao final
-> deste template). Não apresente hipóteses como se fossem conclusões.
+> **Important**: always distinguish between **observed fact**,
+> **hypothesis**, **inference**, and **confirmed conclusion** (see the
+> specific section at the end of this template). Do not present
+> hypotheses as if they were conclusions.
 
-## Contexto
+## Context
 
-Descreva o contexto geral: por que esta análise está sendo realizada, qual
-o cenário do laboratório e qual o gatilho (real ou simulado) que motivou a
-investigação.
+Describe the general context: why this analysis is being performed,
+what the lab scenario is, and what trigger (real or simulated)
+motivated the investigation.
 
-## Escopo
+## Scope
 
-Defina os limites da análise:
+Define the boundaries of the analysis:
 
-- Quais hosts, redes ou intervalos de tempo estão dentro do escopo.
-- O que está explicitamente fora do escopo desta análise.
+- Which hosts, networks, or time ranges are within scope.
+- What is explicitly out of scope for this analysis.
 
-## Origem da captura
+## Capture origin
 
-- Local/ambiente de captura:
-- Interface de rede utilizada:
-- Ferramenta utilizada (Wireshark, TShark, tcpdump etc.):
-- Autorização/contexto de laboratório:
+- Capture location/environment:
+- Network interface used:
+- Tool used (Wireshark, TShark, tcpdump, etc.):
+- Authorization/lab context:
 
-## Data e horário
+## Date and time
 
-- Data da captura:
-- Horário de início:
-- Horário de término:
-- Fuso horário considerado:
+- Capture date:
+- Start time:
+- End time:
+- Time zone considered:
 
-## Hosts envolvidos
+## Hosts involved
 
-| Host/IP (anonimizado) | Papel | Observações |
+| Host/IP (anonymized) | Role | Notes |
 |---|---|---|
 | `<host-lab-01>` | | |
 | `<host-lab-02>` | | |
 
-## Linha do tempo
+## Timeline
 
-| Horário | Evento observado |
+| Time | Observed event |
 |---|---|
-| `HH:MM:SS` | Descrição do evento (fato observado) |
-| `HH:MM:SS` | Descrição do evento (fato observado) |
+| `HH:MM:SS` | Event description (observed fact) |
+| `HH:MM:SS` | Event description (observed fact) |
 
-## Protocolos envolvidos
+## Protocols involved
 
-Liste os protocolos relevantes identificados durante a análise (ex.: TCP,
-DNS, HTTP) e o papel de cada um no cenário investigado.
+List the relevant protocols identified during the analysis (e.g., TCP,
+DNS, HTTP) and the role of each in the investigated scenario.
 
-## Indicadores observados
+## Observed indicators
 
-Liste os indicadores técnicos identificados (ex.: portas incomuns,
-retransmissões elevadas, respostas DNS com erro, conexões para hosts não
-usuais), classificando cada um conforme a seção
-[Fato, hipótese, inferência e conclusão](#fato-hipótese-inferência-e-conclusão-confirmada).
+List the technical indicators identified (e.g., unusual ports,
+elevated retransmissions, DNS error responses, connections to unusual
+hosts), classifying each according to the
+[Fact, hypothesis, inference, and conclusion](#fact-hypothesis-inference-and-confirmed-conclusion)
+section.
 
-## Evidências
+## Evidence
 
-Referencie os pacotes, frames, timestamps e screenshots (anonimizados) que
-sustentam cada indicador observado.
+Reference the packets, frames, timestamps, and screenshots
+(anonymized) that support each observed indicator.
 
-## Hipóteses
+## Hypotheses
 
-Descreva as hipóteses formuladas a partir dos indicadores observados,
-deixando claro que ainda não foram confirmadas.
+Describe the hypotheses formulated from the observed indicators,
+making it clear that they have not yet been confirmed.
 
-## Limitações
+## Limitations
 
-Descreva as limitações da análise (ex.: captura incompleta, ausência de
-logs de outros sistemas, impossibilidade de inspecionar tráfego
-criptografado).
+Describe the limitations of the analysis (e.g., incomplete capture,
+lack of logs from other systems, inability to inspect encrypted
+traffic).
 
-## Conclusão
+## Conclusion
 
-Apresente a conclusão da análise, indicando claramente o nível de
-confiança (confirmada, parcialmente confirmada, inconclusiva).
+Present the conclusion of the analysis, clearly indicating the
+confidence level (confirmed, partially confirmed, inconclusive).
 
-## Recomendações
+## Recommendations
 
-Liste recomendações práticas decorrentes da análise (ex.: ajustes de
-configuração, necessidade de captura adicional, pontos de atenção para
-monitoramento futuro).
+List practical recommendations resulting from the analysis (e.g.,
+configuration adjustments, need for additional capture, points of
+attention for future monitoring).
 
-## Fato, hipótese, inferência e conclusão confirmada
+## Fact, hypothesis, inference, and confirmed conclusion
 
-Para manter o rigor técnico da documentação, utilize sempre a
-classificação abaixo:
+To maintain technical rigor in the documentation, always use the
+classification below:
 
-- **Fato observado**: algo diretamente visível nos pacotes capturados
-  (ex.: "o pacote 42 contém uma flag RST").
-- **Hipótese**: uma possível explicação para um fato observado, ainda não
-  verificada (ex.: "é possível que esse RST indique uma porta fechada no
-  destino").
-- **Inferência**: uma dedução baseada em múltiplos fatos observados, com
-  razoável grau de confiança, mas ainda sujeita a revisão (ex.: "o padrão
-  de RSTs sugere uma varredura de portas").
-- **Conclusão confirmada**: uma afirmação sustentada por evidências
-  suficientes e verificáveis dentro do escopo da análise (ex.: "os pacotes
-  de 1 a 50 confirmam uma varredura sequencial de portas no host X").
+- **Observed fact**: something directly visible in the captured
+  packets (e.g., "packet 42 contains an RST flag").
+- **Hypothesis**: a possible explanation for an observed fact, not yet
+  verified (e.g., "this RST may indicate a closed port on the
+  destination").
+- **Inference**: a deduction based on multiple observed facts, with
+  reasonable confidence, but still subject to review (e.g., "the
+  pattern of RSTs suggests a port scan").
+- **Confirmed conclusion**: a statement supported by sufficient,
+  verifiable evidence within the scope of the analysis (e.g., "packets
+  1 through 50 confirm a sequential port scan on host X").

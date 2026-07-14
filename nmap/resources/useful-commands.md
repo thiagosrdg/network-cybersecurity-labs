@@ -1,20 +1,20 @@
-# Comandos Úteis do Nmap
+# Useful Nmap Commands
 
-Referência rápida de comandos e flags comuns do Nmap, para consulta
-durante os laboratórios. Todos os exemplos devem ser executados apenas
-contra alvos próprios ou autorizados (ver
+Quick reference for common Nmap commands and flags, for use during the
+labs. All examples must be run only against owned or authorized
+targets (see
 [docs/scanning-safety-and-ethics.md](../docs/scanning-safety-and-ethics.md)).
 
-## Descoberta de hosts (host discovery)
+## Host discovery
 
 ```text
 nmap -sn 192.168.1.0/24
 ```
 
-Realiza apenas a descoberta de hosts ativos na rede, sem varredura de
-portas (equivalente a um "ping scan").
+Performs only active host discovery on the network, without port
+scanning (equivalent to a "ping scan").
 
-## Varredura de portas básica
+## Basic port scanning
 
 ```text
 nmap 192.168.1.10
@@ -22,10 +22,10 @@ nmap -p 1-1000 192.168.1.10
 nmap -p- 192.168.1.10
 ```
 
-- `-p 1-1000` — limita o scan a um intervalo de portas.
-- `-p-` — varre todas as 65535 portas TCP.
+- `-p 1-1000` — limits the scan to a port range.
+- `-p-` — scans all 65535 TCP ports.
 
-## Tipos de scan
+## Scan types
 
 ```text
 nmap -sS 192.168.1.10
@@ -33,26 +33,27 @@ nmap -sT 192.168.1.10
 nmap -sU 192.168.1.10
 ```
 
-- `-sS` — SYN scan (half-open), requer privilégios elevados.
-- `-sT` — TCP connect scan, completa o three-way handshake.
-- `-sU` — varredura de portas UDP.
+- `-sS` — SYN scan (half-open), requires elevated privileges.
+- `-sT` — TCP connect scan, completes the three-way handshake.
+- `-sU` — UDP port scan.
 
-## Detecção de serviço e versão
+## Service and version detection
 
 ```text
 nmap -sV 192.168.1.10
 ```
 
-Tenta identificar o serviço e a versão em execução em cada porta aberta.
+Attempts to identify the service and version running on each open
+port.
 
-## Detecção de sistema operacional
+## Operating system detection
 
 ```text
 nmap -O 192.168.1.10
 ```
 
-Tenta inferir o sistema operacional do alvo com base em características
-da pilha TCP/IP.
+Attempts to infer the target's operating system based on TCP/IP stack
+characteristics.
 
 ## Nmap Scripting Engine (NSE)
 
@@ -61,30 +62,30 @@ nmap -sC 192.168.1.10
 nmap --script=default 192.168.1.10
 ```
 
-Executa scripts de reconhecimento padrão do NSE. Scripts mais invasivos
-devem ser usados com cautela redobrada e apenas em ambientes autorizados.
+Runs standard NSE reconnaissance scripts. More invasive scripts should
+be used with extra caution and only in authorized environments.
 
-## Scan completo de reconhecimento
+## Full reconnaissance scan
 
 ```text
 nmap -sS -sV -O -p- 192.168.1.10
 ```
 
-Combina SYN scan, detecção de versão, detecção de SO e varredura de todas
-as portas. Scan mais demorado e mais "ruidoso" — use com moderação.
+Combines SYN scan, version detection, OS detection, and a scan of all
+ports. A slower, "noisier" scan — use in moderation.
 
-## Controle de velocidade (timing)
+## Timing control
 
 ```text
 nmap -T2 192.168.1.10
 nmap -T4 192.168.1.10
 ```
 
-Controla a agressividade temporal do scan (`-T0` mais lento/discreto a
-`-T5` mais rápido/agressivo). Prefira valores mais conservadores em
-laboratórios com recursos limitados.
+Controls the timing aggressiveness of the scan (`-T0` slower/stealthier
+to `-T5` faster/more aggressive). Prefer more conservative values in
+labs with limited resources.
 
-## Exportação de resultados
+## Exporting results
 
 ```text
 nmap -oN output.txt 192.168.1.10
@@ -92,9 +93,9 @@ nmap -oX output.xml 192.168.1.10
 nmap -oG output.gnmap 192.168.1.10
 ```
 
-- `-oN` — saída normal em texto.
-- `-oX` — saída em XML (útil para processamento posterior).
-- `-oG` — saída "grepable" (formato legado, ainda útil em scripts).
+- `-oN` — normal text output.
+- `-oX` — XML output (useful for further processing).
+- `-oG` — "grepable" output (legacy format, still useful in scripts).
 
-Lembre-se de revisar e anonimizar qualquer arquivo de saída antes de
-adicioná-lo a `labs/**/outputs/`.
+Remember to review and anonymize any output file before adding it to
+`labs/**/outputs/`.

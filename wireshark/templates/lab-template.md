@@ -1,73 +1,73 @@
-# Lab XX: Nome do laboratório
+# Lab XX: Lab name
 
 ## Status
 
 Planned
 
-## Objetivo
+## Objective
 
-Descreva o objetivo técnico do laboratório.
+Describe the technical objective of the lab.
 
-## Conceitos abordados
+## Concepts covered
 
-Liste os protocolos, campos, flags, filtros e conceitos relacionados.
+List the protocols, fields, flags, filters, and related concepts.
 
-## Ambiente
+## Environment
 
-- Sistema operacional:
-- Versão do Wireshark:
-- Interface de rede:
-- Topologia:
-- Máquinas virtuais:
-- Ferramentas auxiliares:
+- Operating system:
+- Wireshark version:
+- Network interface:
+- Topology:
+- Virtual machines:
+- Auxiliary tools:
 
-## Cenário
+## Scenario
 
-Explique o cenário utilizado para gerar ou analisar o tráfego.
+Explain the scenario used to generate or analyze the traffic.
 
-## Procedimento
+## Procedure
 
-Descreva os passos executados no laboratório.
+Describe the steps performed in the lab.
 
-## Filtros utilizados
+## Filters used
 
 ### Capture filters
 
 ```text
-Adicionar filtros de captura aqui.
+Add capture filters here.
 ```
 
 ### Display filters
 
 ```text
-Adicionar filtros de exibição aqui.
+Add display filters here.
 ```
 
-## Análise dos pacotes
+## Packet analysis
 
-Documente os pacotes relevantes, campos observados e sequência de
-comunicação.
+Document the relevant packets, observed fields, and communication
+sequence.
 
-## Evidências
+## Evidence
 
-Adicione screenshots anonimizadas e referências aos arquivos de captura.
+Add anonymized screenshots and references to capture files.
 
-## Principais descobertas
+## Key findings
 
-Liste as conclusões técnicas obtidas durante a análise.
+List the technical conclusions obtained during the analysis.
 
-## Indicadores de comportamento suspeito
+## Indicators of suspicious behavior
 
-Descreva possíveis anomalias, quando aplicável.
+Describe possible anomalies, when applicable.
 
-## Mitigações ou recomendações
+## Mitigations or recommendations
 
-Adicione recomendações de segurança ou troubleshooting, quando aplicável.
+Add security or troubleshooting recommendations, when applicable.
 
-## Conclusão
+## Conclusion
 
-Resuma os principais aprendizados do laboratório.
+Summarize the main lessons learned from the lab.
 
-## Referências
+## References
 
-Liste documentação oficial, RFCs e materiais utilizados.
+List official documentation, RFCs, and materials used.

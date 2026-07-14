@@ -4,43 +4,43 @@
 
 Planned
 
-## Objetivo
+## Objective
 
-Analisar o estabelecimento de conexões TCP, identificando as etapas do
-*three-way handshake* (SYN, SYN-ACK e ACK), os números de sequência e
-confirmação envolvidos, e observando possíveis retransmissões, resets ou
-falhas de conexão.
+Analyze the establishment of TCP connections, identifying the steps of
+the *three-way handshake* (SYN, SYN-ACK, and ACK), the sequence and
+acknowledgment numbers involved, and observing possible
+retransmissions, resets, or connection failures.
 
-## Conceitos abordados
+## Concepts covered
 
-- Protocolo TCP (Transmission Control Protocol).
+- TCP protocol (Transmission Control Protocol).
 - *Three-way handshake* (SYN, SYN-ACK, ACK).
-- Números de sequência (`seq`) e confirmação (`ack`).
-- Flags TCP (SYN, ACK, RST, FIN).
-- Retransmissões e análise de erros (`tcp.analysis.*`).
-- Encerramento de conexão (gracioso via FIN, abrupto via RST).
+- Sequence (`seq`) and acknowledgment (`ack`) numbers.
+- TCP flags (SYN, ACK, RST, FIN).
+- Retransmissions and error analysis (`tcp.analysis.*`).
+- Connection termination (graceful via FIN, abrupt via RST).
 
-## Ambiente
+## Environment
 
-- Sistema operacional: `<preencher>`
-- Versão do Wireshark: `<preencher>`
-- Interface de rede: `<preencher>`
-- Topologia: `<preencher>`
-- Máquinas virtuais: `<preencher>`
-- Ferramentas auxiliares: `<preencher>`
+- Operating system: `<fill in>`
+- Wireshark version: `<fill in>`
+- Network interface: `<fill in>`
+- Topology: `<fill in>`
+- Virtual machines: `<fill in>`
+- Auxiliary tools: `<fill in>`
 
-## Cenário
+## Scenario
 
-`<Descrever o cenário utilizado para gerar o tráfego TCP, por exemplo,
-conexões estabelecidas entre um cliente e um servidor de laboratório em
-uma porta específica.>`
+`<Describe the scenario used to generate the TCP traffic, for example,
+connections established between a client and a lab server on a
+specific port.>`
 
-## Procedimento
+## Procedure
 
-`<Descrever, passo a passo, como a captura foi realizada e como as
-conexões TCP foram geradas durante o laboratório.>`
+`<Describe, step by step, how the capture was performed and how the
+TCP connections were generated during the lab.>`
 
-## Filtros utilizados
+## Filters used
 
 ### Capture filters
 
@@ -59,38 +59,37 @@ tcp.flags.reset == 1
 tcp.analysis.retransmission
 ```
 
-## Análise dos pacotes
+## Packet analysis
 
-`<Documentar aqui os pacotes relevantes observados durante a execução real
-do laboratório: sequência completa do handshake, números de seq/ack em
-cada etapa e eventuais falhas identificadas.>`
+`<Document here the relevant packets observed during the actual
+execution of the lab: the full handshake sequence, seq/ack numbers at
+each step, and any failures identified.>`
 
-## Evidências
+## Evidence
 
-`<Adicionar screenshots anonimizadas em screenshots/ e referenciar os
-arquivos de captura correspondentes em captures/ quando o laboratório for
-executado.>`
+`<Add anonymized screenshots in screenshots/ and reference the
+corresponding capture files in captures/ once the lab is performed.>`
 
-## Principais descobertas
+## Key findings
 
-`<Preencher após a execução do laboratório.>`
+`<Fill in after the lab is performed.>`
 
-## Indicadores de comportamento suspeito
+## Indicators of suspicious behavior
 
-`<Preencher, se aplicável, após a execução do laboratório — por exemplo,
-volume elevado de pacotes SYN sem conclusão do handshake (possível
-half-open scan) ou RSTs incomuns.>`
+`<Fill in, if applicable, after the lab is performed — for example, a
+high volume of SYN packets without a completed handshake (possible
+half-open scan) or unusual RSTs.>`
 
-## Mitigações ou recomendações
+## Mitigations or recommendations
 
-`<Preencher, se aplicável, após a execução do laboratório.>`
+`<Fill in, if applicable, after the lab is performed.>`
 
-## Conclusão
+## Conclusion
 
-`<Preencher após a execução do laboratório.>`
+`<Fill in after the lab is performed.>`
 
-## Referências
+## References
 
 - [RFC 9293 — Transmission Control Protocol (TCP)](https://www.rfc-editor.org/rfc/rfc9293)
-- [Documentação oficial do Wireshark](https://www.wireshark.org/docs/)
+- [Official Wireshark documentation](https://www.wireshark.org/docs/)
 - [docs/wireshark-display-filters.md](../../docs/wireshark-display-filters.md)

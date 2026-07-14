@@ -4,44 +4,44 @@
 
 Planned
 
-## Objetivo
+## Objective
 
-Analisar requisições e respostas HTTP capturadas em um ambiente
-controlado, identificando métodos, códigos de status, cabeçalhos e
-conteúdo transmitido. O laboratório também busca demonstrar, na prática,
-os riscos do tráfego HTTP sem criptografia.
+Analyze HTTP requests and responses captured in a controlled
+environment, identifying methods, status codes, headers, and
+transmitted content. The lab also aims to demonstrate, in practice,
+the risks of unencrypted HTTP traffic.
 
-## Conceitos abordados
+## Concepts covered
 
-- Protocolo HTTP (Hypertext Transfer Protocol).
-- Métodos HTTP (GET, POST, entre outros).
-- Códigos de status HTTP (2xx, 3xx, 4xx, 5xx).
-- Cabeçalhos HTTP relevantes (`Host`, `User-Agent`, `Content-Type`,
+- HTTP protocol (Hypertext Transfer Protocol).
+- HTTP methods (GET, POST, among others).
+- HTTP status codes (2xx, 3xx, 4xx, 5xx).
+- Relevant HTTP headers (`Host`, `User-Agent`, `Content-Type`,
   `Authorization`, `Cookie`).
-- Riscos de transmissão de dados em texto claro.
-- Diferença entre HTTP e HTTPS/TLS (conceitual).
+- Risks of transmitting data in plain text.
+- Difference between HTTP and HTTPS/TLS (conceptual).
 
-## Ambiente
+## Environment
 
-- Sistema operacional: `<preencher>`
-- Versão do Wireshark: `<preencher>`
-- Interface de rede: `<preencher>`
-- Topologia: `<preencher>`
-- Máquinas virtuais: `<preencher>`
-- Ferramentas auxiliares: `<preencher>`
+- Operating system: `<fill in>`
+- Wireshark version: `<fill in>`
+- Network interface: `<fill in>`
+- Topology: `<fill in>`
+- Virtual machines: `<fill in>`
+- Auxiliary tools: `<fill in>`
 
-## Cenário
+## Scenario
 
-`<Descrever o cenário utilizado para gerar o tráfego HTTP, por exemplo,
-requisições feitas a um servidor web de laboratório com conteúdo e
-credenciais fictícias.>`
+`<Describe the scenario used to generate the HTTP traffic, for
+example, requests made to a lab web server with fictitious content and
+credentials.>`
 
-## Procedimento
+## Procedure
 
-`<Descrever, passo a passo, como a captura foi realizada e quais
-requisições HTTP foram geradas durante o laboratório.>`
+`<Describe, step by step, how the capture was performed and which HTTP
+requests were generated during the lab.>`
 
-## Filtros utilizados
+## Filters used
 
 ### Capture filters
 
@@ -60,46 +60,45 @@ http.request.method == "POST"
 http.response.code >= 400
 ```
 
-## Análise dos pacotes
+## Packet analysis
 
-`<Documentar aqui os pacotes relevantes observados durante a execução real
-do laboratório: requisições e respostas relevantes, métodos utilizados,
-códigos de status e cabeçalhos observados.>`
+`<Document here the relevant packets observed during the actual
+execution of the lab: relevant requests and responses, methods used,
+status codes, and observed headers.>`
 
-## Evidências
+## Evidence
 
-`<Adicionar screenshots anonimizadas em screenshots/ e referenciar os
-arquivos de captura correspondentes em captures/ quando o laboratório for
-executado.>`
+`<Add anonymized screenshots in screenshots/ and reference the
+corresponding capture files in captures/ once the lab is performed.>`
 
-## Principais descobertas
+## Key findings
 
-`<Preencher após a execução do laboratório.>`
+`<Fill in after the lab is performed.>`
 
-## Indicadores de comportamento suspeito
+## Indicators of suspicious behavior
 
-`<Preencher, se aplicável, após a execução do laboratório.>`
+`<Fill in, if applicable, after the lab is performed.>`
 
-## Mitigações ou recomendações
+## Mitigations or recommendations
 
-`<Preencher, se aplicável, após a execução do laboratório — por exemplo,
-recomendação de uso de HTTPS/TLS para qualquer tráfego que envolva dados
-sensíveis.>`
+`<Fill in, if applicable, after the lab is performed — for example, a
+recommendation to use HTTPS/TLS for any traffic involving sensitive
+data.>`
 
-## Conclusão
+## Conclusion
 
-`<Preencher após a execução do laboratório.>`
+`<Fill in after the lab is performed.>`
 
-## Referências
+## References
 
 - [RFC 9110 — HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110)
-- [Documentação oficial do Wireshark](https://www.wireshark.org/docs/)
+- [Official Wireshark documentation](https://www.wireshark.org/docs/)
 - [docs/wireshark-display-filters.md](../../docs/wireshark-display-filters.md)
 
 ---
 
-> ⚠️ **Aviso**: este laboratório deve ser realizado exclusivamente em
-> ambiente controlado, utilizando credenciais e dados fictícios.
-> **Credenciais, cookies e tokens reais nunca devem ser publicados** em
-> capturas, screenshots ou nesta documentação. Veja
+> ⚠️ **Warning**: this lab must be performed exclusively in a
+> controlled environment, using fictitious credentials and data.
+> **Real credentials, cookies, and tokens must never be published** in
+> captures, screenshots, or this documentation. See
 > [docs/packet-capture-safety.md](../../docs/packet-capture-safety.md).

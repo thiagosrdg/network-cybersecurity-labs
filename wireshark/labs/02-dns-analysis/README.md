@@ -4,43 +4,42 @@
 
 Planned
 
-## Objetivo
+## Objective
 
-Analisar consultas e respostas DNS capturadas em ambiente de laboratório,
-identificando os nomes consultados, os tipos de registro envolvidos e os
-códigos de resposta. O laboratório busca observar tanto o comportamento
-normal de resolução de nomes quanto possíveis anomalias.
+Analyze DNS queries and responses captured in a lab environment,
+identifying the queried names, the record types involved, and the
+response codes. The lab aims to observe both normal name resolution
+behavior and possible anomalies.
 
-## Conceitos abordados
+## Concepts covered
 
-- Protocolo DNS (Domain Name System).
-- Estrutura de consultas (queries) e respostas (responses).
-- Tipos de registro (A, AAAA, CNAME, MX, entre outros).
-- Códigos de resposta DNS (`rcode`), incluindo `NOERROR` e `NXDOMAIN`.
-- Diferença entre resolução recursiva e iterativa (conceitual).
-- Filtros de captura e exibição específicos para DNS.
+- DNS protocol (Domain Name System).
+- Structure of queries and responses.
+- Record types (A, AAAA, CNAME, MX, among others).
+- DNS response codes (`rcode`), including `NOERROR` and `NXDOMAIN`.
+- Difference between recursive and iterative resolution (conceptual).
+- Capture and display filters specific to DNS.
 
-## Ambiente
+## Environment
 
-- Sistema operacional: `<preencher>`
-- Versão do Wireshark: `<preencher>`
-- Interface de rede: `<preencher>`
-- Topologia: `<preencher>`
-- Máquinas virtuais: `<preencher>`
-- Ferramentas auxiliares: `<preencher>`
+- Operating system: `<fill in>`
+- Wireshark version: `<fill in>`
+- Network interface: `<fill in>`
+- Topology: `<fill in>`
+- Virtual machines: `<fill in>`
+- Auxiliary tools: `<fill in>`
 
-## Cenário
+## Scenario
 
-`<Descrever o cenário utilizado para gerar o tráfego DNS, por exemplo,
-resolução de nomes a partir de um host de laboratório contra um resolver
-DNS controlado.>`
+`<Describe the scenario used to generate the DNS traffic, for example,
+name resolution from a lab host against a controlled DNS resolver.>`
 
-## Procedimento
+## Procedure
 
-`<Descrever, passo a passo, como a captura foi realizada e quais consultas
-DNS foram geradas durante o laboratório.>`
+`<Describe, step by step, how the capture was performed and which DNS
+queries were generated during the lab.>`
 
-## Filtros utilizados
+## Filters used
 
 ### Capture filters
 
@@ -58,38 +57,37 @@ dns.qry.name
 dns.flags.rcode != 0
 ```
 
-## Análise dos pacotes
+## Packet analysis
 
-`<Documentar aqui os pacotes relevantes observados durante a execução real
-do laboratório: nomes consultados, tipos de registro, tempos de resposta e
-eventuais códigos de erro retornados.>`
+`<Document here the relevant packets observed during the actual
+execution of the lab: queried names, record types, response times, and
+any error codes returned.>`
 
-## Evidências
+## Evidence
 
-`<Adicionar screenshots anonimizadas em screenshots/ e referenciar os
-arquivos de captura correspondentes em captures/ quando o laboratório for
-executado.>`
+`<Add anonymized screenshots in screenshots/ and reference the
+corresponding capture files in captures/ once the lab is performed.>`
 
-## Principais descobertas
+## Key findings
 
-`<Preencher após a execução do laboratório.>`
+`<Fill in after the lab is performed.>`
 
-## Indicadores de comportamento suspeito
+## Indicators of suspicious behavior
 
-`<Preencher, se aplicável, após a execução do laboratório — por exemplo,
-consultas para domínios incomuns, volume elevado de respostas `NXDOMAIN`
-ou padrões de consulta atípicos.>`
+`<Fill in, if applicable, after the lab is performed — for example,
+queries to unusual domains, a high volume of `NXDOMAIN` responses, or
+atypical query patterns.>`
 
-## Mitigações ou recomendações
+## Mitigations or recommendations
 
-`<Preencher, se aplicável, após a execução do laboratório.>`
+`<Fill in, if applicable, after the lab is performed.>`
 
-## Conclusão
+## Conclusion
 
-`<Preencher após a execução do laboratório.>`
+`<Fill in after the lab is performed.>`
 
-## Referências
+## References
 
 - [RFC 1035 — Domain Names, Implementation and Specification](https://www.rfc-editor.org/rfc/rfc1035)
-- [Documentação oficial do Wireshark](https://www.wireshark.org/docs/)
+- [Official Wireshark documentation](https://www.wireshark.org/docs/)
 - [docs/wireshark-display-filters.md](../../docs/wireshark-display-filters.md)

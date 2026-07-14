@@ -1,49 +1,58 @@
 # Network & Cybersecurity Labs
 
-![Status](https://img.shields.io/badge/status-em%20andamento-yellow)
-![Foco](https://img.shields.io/badge/foco-cybersecurity-blue)
-![Licença](https://img.shields.io/badge/licença-MIT-green)
+![Status](https://img.shields.io/badge/status-in%20progress-yellow)
+![Focus](https://img.shields.io/badge/focus-cybersecurity-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-## Descrição
+## Description
 
-Este repositório reúne laboratórios práticos de **redes e cybersecurity**,
-organizados por ferramenta/tema em tracks independentes. Cada track
-documenta laboratórios de análise, investigação ou reconhecimento de rede,
-seguindo uma metodologia consistente e uma estrutura de documentação
-padronizada.
+This repository brings together hands-on **network and cybersecurity
+labs**, organized by tool/topic into independent tracks. Each track
+documents analysis, investigation, or network reconnaissance labs,
+following a consistent methodology and a standardized documentation
+structure.
 
-O objetivo é construir, de forma incremental, um portfólio técnico que
-demonstre a capacidade de operar ferramentas de rede e segurança,
-interpretar seus resultados e documentar análises de forma clara e
-reprodutível — sempre em ambientes próprios ou explicitamente autorizados.
+The goal is to incrementally build a technical portfolio that
+demonstrates the ability to operate network and security tools,
+interpret their results, and document analyses clearly and
+reproducibly — always in owned or explicitly authorized environments.
+
+## Ethics statement
+
+> All laboratories in this repository were performed in controlled
+> environments using systems owned by me or explicitly authorized
+> for security testing.
+>
+> IP addresses, hostnames, MAC addresses and other identifying
+> information may be replaced with synthetic values for documentation.
 
 ## Tracks
 
-| Track | Ferramenta/Tema | Descrição | Status |
+| Track | Tool/Topic | Description | Status |
 |---|---|---|---|
-| [wireshark/](wireshark/README.md) | Wireshark | Análise de tráfego de rede, protocolos e investigação de pacotes | `Em andamento` |
-| [nmap/](nmap/README.md) | Nmap | Descoberta de rede, varredura de portas e enumeração de serviços | `Planejado` |
+| [wireshark/](wireshark/README.md) | Wireshark | Network traffic analysis, protocols, and packet investigation | `In progress` |
+| [nmap/](nmap/README.md) | Nmap | Network discovery, port scanning, and service enumeration | `Planned` |
 
-Novos tracks podem ser adicionados a qualquer momento — basta criar uma
-nova pasta na raiz do repositório (ex.: `zeek/`, `tcpdump/`,
-`log-analysis/`) seguindo o mesmo padrão de organização descrito abaixo.
+New tracks can be added at any time — just create a new folder at the
+root of the repository (e.g., `zeek/`, `tcpdump/`, `log-analysis/`)
+following the same organization pattern described below.
 
-## Estrutura do repositório
+## Repository structure
 
 ```text
 network-cybersecurity-labs/
-├── README.md               # Este arquivo — índice geral do repositório
+├── README.md               # This file — general index of the repository
 ├── LICENSE
 ├── .gitignore
 ├── CONTRIBUTING.md
 ├── SECURITY.md
-├── wireshark/               # Track de análise de tráfego com Wireshark
+├── wireshark/               # Traffic analysis track with Wireshark
 │   ├── README.md
 │   ├── docs/
 │   ├── labs/
 │   ├── templates/
 │   └── resources/
-└── nmap/                    # Track de scanning e enumeração com Nmap
+└── nmap/                    # Scanning and enumeration track with Nmap
     ├── README.md
     ├── docs/
     ├── labs/
@@ -51,106 +60,106 @@ network-cybersecurity-labs/
     └── resources/
 ```
 
-Cada track segue a mesma organização interna:
+Each track follows the same internal organization:
 
-- `README.md` — descrição do track, objetivos, laboratórios e aviso
-  ético/legal específico da ferramenta.
-- `docs/` — metodologia, conceitos de apoio e diretrizes de segurança.
-- `labs/` — laboratórios práticos numerados (`NN-nome-do-laboratorio/`),
-  cada um com seu próprio `README.md` e diretórios para evidências
-  (`captures/`, `outputs/`, `screenshots/`, conforme a ferramenta).
-- `templates/` — modelos reutilizáveis para novos laboratórios.
-- `resources/` — referências rápidas, filtros e comandos úteis.
+- `README.md` — track description, objectives, labs, and a
+  tool-specific ethical/legal notice.
+- `docs/` — methodology, supporting concepts, and security guidelines.
+- `labs/` — numbered hands-on labs (`NN-lab-name/`), each with its own
+  `README.md` and directories for evidence (`captures/`, `outputs/`,
+  `screenshots/`, depending on the tool).
+- `templates/` — reusable templates for new labs.
+- `resources/` — quick references, filters, and useful commands.
 
-Os arquivos `LICENSE`, `.gitignore`, `CONTRIBUTING.md` e `SECURITY.md` são
-únicos e compartilhados entre todos os tracks.
+The `LICENSE`, `.gitignore`, `CONTRIBUTING.md`, and `SECURITY.md` files
+are unique and shared across all tracks.
 
-## Competências demonstradas
+## Skills demonstrated
 
-- Análise de pacotes e interpretação de cabeçalhos em múltiplas camadas.
-- Compreensão prática de protocolos TCP/IP (Ethernet, ARP, IPv4/IPv6,
-  ICMP, TCP, UDP, DNS, HTTP).
-- Uso de filtros de captura e de exibição no Wireshark.
-- Reconhecimento de rede e enumeração de serviços com o Nmap.
-- Troubleshooting de rede a partir de evidências técnicas.
-- Identificação inicial de tráfego suspeito e indicadores de
-  comprometimento.
-- Fundamentos de network forensics.
-- Documentação técnica estruturada e uso responsável de ferramentas de
-  rede e segurança.
+- Packet analysis and header interpretation across multiple layers.
+- Practical understanding of TCP/IP protocols (Ethernet, ARP,
+  IPv4/IPv6, ICMP, TCP, UDP, DNS, HTTP).
+- Use of capture filters and display filters in Wireshark.
+- Network reconnaissance and service enumeration with Nmap.
+- Network troubleshooting from technical evidence.
+- Initial identification of suspicious traffic and indicators of
+  compromise.
+- Network forensics fundamentals.
+- Structured technical documentation and responsible use of network
+  and security tools.
 
-## Metodologia de análise
+## Analysis methodology
 
-Cada track segue uma metodologia própria, adaptada à ferramenta e ao tipo
-de evidência analisada, mas todas compartilham os mesmos princípios:
+Each track follows its own methodology, adapted to the tool and the
+type of evidence analyzed, but all of them share the same principles:
 
-1. Definição clara do objetivo da análise.
-2. Validação da origem da evidência (captura, scan, log).
-3. Identificação de hosts, protocolos ou serviços predominantes.
-4. Aplicação progressiva de filtros/comandos, do mais amplo ao mais
-   específico.
-5. Identificação de anomalias, sem conclusões precipitadas.
-6. Validação de hipóteses com evidências concretas.
-7. Registro estruturado de evidências.
-8. Proteção de dados sensíveis antes de qualquer publicação.
-9. Documentação de conclusões, limitações e recomendações.
+1. Clearly define the objective of the analysis.
+2. Validate the origin of the evidence (capture, scan, log).
+3. Identify predominant hosts, protocols, or services.
+4. Progressively apply filters/commands, from broad to specific.
+5. Identify anomalies without jumping to conclusions.
+6. Validate hypotheses with concrete evidence.
+7. Record evidence in a structured way.
+8. Protect sensitive data before any publication.
+9. Document conclusions, limitations, and recommendations.
 
-Veja a metodologia detalhada de cada track em
+See the detailed methodology for each track in
 [wireshark/docs/network-analysis-methodology.md](wireshark/docs/network-analysis-methodology.md).
 
-## Aviso ético e legal
+## Ethical and legal notice
 
-> ⚠️ **Aviso importante**
+> ⚠️ **Important notice**
 >
-> Todos os laboratórios deste repositório — captura de tráfego, varredura
-> de portas ou qualquer outra técnica — devem ser realizados **apenas em
-> ambientes próprios ou explicitamente autorizados**. Capturar tráfego ou
-> escanear redes, sistemas ou dispositivos de terceiros sem autorização
-> pode violar leis locais e políticas de uso aceitável.
+> All labs in this repository — traffic capture, port scanning, or any
+> other technique — must be performed **only in owned or explicitly
+> authorized environments**. Capturing traffic from or scanning
+> third-party networks, systems, or devices without authorization may
+> violate local laws and acceptable use policies.
 >
-> Este repositório tem finalidade **exclusivamente educacional e
-> defensiva**. Nenhum laboratório aqui documentado tem como objetivo
-> comprometer sistemas de terceiros.
+> This repository has an **exclusively educational and defensive**
+> purpose. None of the labs documented here are intended to compromise
+> third-party systems.
 >
-> Cada track possui um aviso ético específico e orientações detalhadas de
-> anonimização — consulte:
+> Each track has its own specific ethical notice and detailed
+> anonymization guidelines — see:
 > - [wireshark/docs/packet-capture-safety.md](wireshark/docs/packet-capture-safety.md)
 > - [nmap/docs/scanning-safety-and-ethics.md](nmap/docs/scanning-safety-and-ethics.md)
 
-## Instruções para executar ou reproduzir os laboratórios
+## Instructions to run or reproduce the labs
 
-1. Escolha o track desejado (`wireshark/` ou `nmap/`).
-2. Leia o `README.md` do track para entender objetivos e pré-requisitos.
-3. Prepare um ambiente de laboratório isolado e próprio (máquina virtual
-   ou rede virtual).
-4. Acesse o laboratório específico dentro de `labs/` e siga o
-   procedimento descrito.
-5. Antes de versionar qualquer captura, saída de scan ou screenshot,
-   revise o conteúdo conforme as diretrizes de segurança do respectivo
-   track.
+1. Choose the desired track (`wireshark/` or `nmap/`).
+2. Read the track's `README.md` to understand objectives and
+   prerequisites.
+3. Set up an isolated environment you own (virtual machine or virtual
+   network).
+4. Go to the specific lab inside `labs/` and follow the described
+   procedure.
+5. Before committing any capture, scan output, or screenshot, review
+   the content according to the respective track's security
+   guidelines.
 
-## Progresso
+## Progress
 
-Este repositório está em fase de estruturação. O track `wireshark/` possui
-a documentação base de cinco laboratórios criada, ainda **sem capturas ou
-resultados reais registrados**. O track `nmap/` foi recém-criado, com a
-estrutura base e um laboratório inicial planejado. O progresso de cada
-laboratório é acompanhado pelo campo `Status` em seu respectivo
+This repository is in the structuring phase. The `wireshark/` track has
+the base documentation for five labs created, still **with no real
+captures or results recorded**. The `nmap/` track was just created,
+with the base structure and one initial lab planned. The progress of
+each lab is tracked via the `Status` field in its respective
 `README.md`.
 
-## Próximos passos
+## Next steps
 
-- Executar e documentar os primeiros laboratórios reais em `wireshark/` e
-  `nmap/`.
-- Expandir o track `nmap/` com laboratórios de detecção de
-  serviço/versão, detecção de SO e uso do NSE.
-- Avaliar a criação de novos tracks (ex.: `tcpdump/`, `zeek/`,
-  `log-analysis/`) conforme novos laboratórios forem realizados.
+- Run and document the first real labs in `wireshark/` and `nmap/`.
+- Expand the `nmap/` track with service/version detection, OS
+  detection, and NSE labs.
+- Consider creating new tracks (e.g., `tcpdump/`, `zeek/`,
+  `log-analysis/`) as new labs are performed.
 
-## Padrão de commits
+## Commit convention
 
-Este repositório segue a convenção de
-[Conventional Commits](https://www.conventionalcommits.org/):
+This repository follows the
+[Conventional Commits](https://www.conventionalcommits.org/)
+convention:
 
 ```text
 docs: add DNS analysis notes
@@ -160,13 +169,14 @@ refactor: reorganize lab structure
 chore: update repository metadata
 ```
 
-## Contato e perfil profissional
+## Contact and professional profile
 
 - GitHub: [thiagosrdg](https://github.com/thiagosrdg)
-- LinkedIn: `<adicionar link do LinkedIn>`
-- E-mail de contato: `<adicionar e-mail de contato profissional>`
+- LinkedIn: `<add LinkedIn link>`
+- Contact e-mail: `<add professional contact e-mail>`
 
 ---
 
-*Este é um projeto de estudo pessoal em redes e cybersecurity. Sugestões e
-correções técnicas são bem-vindas — consulte [CONTRIBUTING.md](CONTRIBUTING.md).*
+*This is a personal study project in networking and cybersecurity.
+Suggestions and technical corrections are welcome — see
+[CONTRIBUTING.md](CONTRIBUTING.md).*

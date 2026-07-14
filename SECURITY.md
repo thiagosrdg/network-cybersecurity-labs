@@ -1,48 +1,48 @@
-# Política de Segurança
+# Security Policy
 
-## Finalidade do projeto
+## Project purpose
 
-O **Network & Cybersecurity Labs** é um repositório com finalidade
-**exclusivamente educacional e defensiva**, criado para documentar
-laboratórios de redes e cybersecurity organizados por track (ex.:
-`wireshark/`, `nmap/`). Ele não tem como objetivo armazenar, distribuir ou
-promover técnicas ofensivas contra sistemas de terceiros.
+**Network & Cybersecurity Labs** is a repository with an **exclusively
+educational and defensive** purpose, created to document networking and
+cybersecurity labs organized by track (e.g., `wireshark/`, `nmap/`). It
+is not intended to store, distribute, or promote offensive techniques
+against third-party systems.
 
-## Reporte de vulnerabilidades ou dados sensíveis
+## Reporting vulnerabilities or sensitive data
 
-Se você identificar:
+If you identify:
 
-- uma vulnerabilidade relacionada ao conteúdo deste repositório;
-- um arquivo de captura, saída de scan, screenshot ou trecho de
-  documentação que contenha, por engano, dados sensíveis (IPs públicos
-  pessoais, hostnames reais, credenciais, cookies, tokens ou informações
-  de terceiros);
+- a vulnerability related to the content of this repository;
+- a capture file, scan output, screenshot, or piece of documentation
+  that mistakenly contains sensitive data (personal public IPs, real
+  hostnames, credentials, cookies, tokens, or third-party
+  information);
 
-por favor, **não abra uma issue pública** descrevendo o problema em
-detalhes. Em vez disso, entre em contato de forma privada com o mantenedor
-através do e-mail ou canal indicado no `README.md` (seção "Contato e perfil
-profissional"), descrevendo o problema de forma resumida.
+please **do not open a public issue** describing the problem in
+detail. Instead, contact the maintainer privately through the e-mail
+or channel listed in the `README.md` ("Contact and professional
+profile" section), describing the issue briefly.
 
-## Diretrizes gerais
+## General guidelines
 
-- **Credenciais e dados pessoais nunca devem ser publicados em issues,
-  pull requests ou arquivos versionados.**
-- Todo arquivo de captura (`.pcap`/`.pcapng`) ou saída de scanning deve
-  ser revisado manualmente antes de ser adicionado ao repositório,
-  conforme as diretrizes de cada track:
+- **Credentials and personal data must never be published in issues,
+  pull requests, or versioned files.**
+- Every capture file (`.pcap`/`.pcapng`) or scanning output must be
+  manually reviewed before being added to the repository, following
+  each track's guidelines:
   - [wireshark/docs/packet-capture-safety.md](wireshark/docs/packet-capture-safety.md)
   - [nmap/docs/scanning-safety-and-ethics.md](nmap/docs/scanning-safety-and-ethics.md)
-- Screenshots devem ser revisados para garantir que não exponham IPs
-  públicos pessoais, hostnames reais, e-mails, tokens ou outros dados
-  identificáveis.
-- Caso um material sensível seja identificado após o merge, ele será
-  removido do histórico assim que possível e a política de anonimização
-  será reforçada.
+- Screenshots must be reviewed to ensure they do not expose personal
+  public IPs, real hostnames, e-mails, tokens, or other identifiable
+  data.
+- If sensitive material is identified after a merge, it will be
+  removed from the history as soon as possible and the anonymization
+  policy will be reinforced.
 
-## Escopo
+## Scope
 
-Este repositório não hospeda aplicações em produção nem processa dados de
-usuários reais. Portanto, o escopo de "segurança" aqui trata
-principalmente da **proteção de dados eventualmente presentes em
-capturas de tráfego, saídas de scan e demais evidências de laboratório**,
-e não de vulnerabilidades de software em execução.
+This repository does not host production applications or process real
+user data. Therefore, the "security" scope here mainly concerns the
+**protection of data potentially present in traffic captures, scan
+outputs, and other lab evidence**, not vulnerabilities in running
+software.

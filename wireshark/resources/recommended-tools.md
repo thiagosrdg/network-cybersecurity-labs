@@ -1,65 +1,64 @@
-# Ferramentas Recomendadas
+# Recommended Tools
 
-Ferramentas complementares que podem ser utilizadas ao longo dos
-laboratórios deste repositório, além do próprio Wireshark. A lista tem
-finalidade defensiva e educacional — nenhuma ferramenta listada é
-apresentada como requisito para uso ofensivo.
+Complementary tools that can be used throughout the labs in this
+repository, besides Wireshark itself. The list has a defensive and
+educational purpose — no listed tool is presented as a requirement for
+offensive use.
 
 ## Wireshark
 
-Analisador de protocolos de rede com interface gráfica, utilizado como
-ferramenta principal deste repositório para inspecionar capturas de
-tráfego, aplicar filtros e investigar o comportamento de protocolos em
-detalhe.
+Graphical network protocol analyzer, used as the main tool in this
+repository to inspect traffic captures, apply filters, and investigate
+protocol behavior in detail.
 
 ## TShark
 
-Versão de linha de comando do Wireshark, útil para automação, análise em
-servidores sem interface gráfica e processamento de capturas em scripts.
+Command-line version of Wireshark, useful for automation, analysis on
+servers without a graphical interface, and processing captures in
+scripts.
 
 ## tcpdump
 
-Ferramenta de captura de pacotes via linha de comando, amplamente
-disponível em sistemas Unix-like. Frequentemente utilizada para gerar
-capturas `.pcap` em ambientes de laboratório que depois são analisadas em
-detalhe no Wireshark.
+Command-line packet capture tool, widely available on Unix-like
+systems. Frequently used to generate `.pcap` captures in lab
+environments that are later analyzed in detail in Wireshark.
 
 ## Nmap
 
-Ferramenta de descoberta de rede e varredura de portas. Neste repositório,
-é mencionada apenas como geradora de tráfego controlado em laboratórios
-próprios (ex.: para estudar como uma varredura de portas se manifesta em
-uma captura), e não como ferramenta de ataque a terceiros.
+Network discovery and port scanning tool. In this repository, it is
+mentioned only as a generator of controlled traffic in owned labs
+(e.g., to study how a port scan shows up in a capture), not as a tool
+for attacking third parties.
 
 ## Zeek
 
-Framework de análise de tráfego de rede voltado a monitoramento de
-segurança, capaz de gerar logs estruturados de conexões e protocolos a
-partir de capturas de tráfego. Útil como complemento ao Wireshark em
-análises de maior escala.
+Network traffic analysis framework aimed at security monitoring,
+capable of generating structured logs of connections and protocols
+from traffic captures. Useful as a complement to Wireshark in
+larger-scale analyses.
 
 ## NetworkMiner
 
-Ferramenta de análise forense de rede que extrai artefatos (arquivos,
-credenciais, sessões) a partir de capturas `.pcap`. Utilizada para
-complementar a investigação manual feita no Wireshark, sempre em
-ambientes de laboratório controlados.
+Network forensics tool that extracts artifacts (files, credentials,
+sessions) from `.pcap` captures. Used to complement manual
+investigation done in Wireshark, always in controlled lab
+environments.
 
 ## CyberChef
 
-Aplicação web para transformação, decodificação e análise de dados (ex.:
-decodificação Base64, hashes, extração de payloads). Útil para examinar
-conteúdos extraídos de pacotes durante uma investigação.
+Web application for transforming, decoding, and analyzing data (e.g.,
+Base64 decoding, hashes, payload extraction). Useful for examining
+content extracted from packets during an investigation.
 
 ## Python
 
-Linguagem utilizada para automatizar tarefas de análise, processar
-capturas programaticamente (ex.: com bibliotecas como `pyshark`) e apoiar
-a geração de relatórios técnicos.
+Language used to automate analysis tasks, programmatically process
+captures (e.g., with libraries such as `pyshark`), and support the
+generation of technical reports.
 
 ## Scapy
 
-Biblioteca Python para criação, manipulação e envio de pacotes de rede.
-Utilizada em laboratórios controlados para gerar tráfego sintético
-específico (ex.: pacotes ICMP customizados) que depois é analisado no
+Python library for creating, manipulating, and sending network
+packets. Used in controlled labs to generate specific synthetic
+traffic (e.g., custom ICMP packets) that is then analyzed in
 Wireshark.

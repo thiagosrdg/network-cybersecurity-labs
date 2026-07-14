@@ -1,62 +1,64 @@
-# Segurança e Ética no Uso do Nmap
+# Nmap Safety and Ethics
 
-O Nmap é uma ferramenta de descoberta de rede e varredura de portas.
-Diferente de uma captura passiva de tráfego, um scan é uma ação **ativa**
-contra um alvo — por isso, os cuidados de autorização aqui são ainda mais
-críticos do que os descritos para o track
-[wireshark](../../wireshark/docs/packet-capture-safety.md).
+Nmap is a network discovery and port scanning tool. Unlike a passive
+traffic capture, a scan is an **active** action against a target —
+which is why the authorization precautions here are even more critical
+than those described for the
+[wireshark](../../wireshark/docs/packet-capture-safety.md) track.
 
-## Autorização é obrigatória
+## Authorization is mandatory
 
-- **Nunca execute um scan contra hosts, redes ou sistemas que não sejam
-  seus ou para os quais você não tenha autorização explícita e por
-  escrito.**
-- Varredura de portas sem autorização pode ser considerada crime em
-  diversas jurisdições, mesmo quando não causa dano direto.
-- Em ambientes corporativos, obtenha autorização formal (ex.: janela de
-  teste aprovada, escopo definido) antes de qualquer scan, mesmo para
-  fins de estudo.
+- **Never run a scan against hosts, networks, or systems that are not
+  yours or for which you do not have explicit, written
+  authorization.**
+- Port scanning without authorization may be considered a crime in
+  several jurisdictions, even when it causes no direct harm.
+- In corporate environments, obtain formal authorization (e.g., an
+  approved test window, defined scope) before any scan, even for study
+  purposes.
 
-## Ambientes recomendados para os laboratórios
+## Recommended environments for the labs
 
-- Máquinas virtuais próprias, em rede isolada (host-only/NAT).
-- Alvos de teste legítimos e mantidos para fins educacionais (ex.:
-  `scanme.nmap.org`, que é disponibilizado publicamente pelos
-  mantenedores do Nmap especificamente para testes leves e respeitosos —
-  consulte sempre a política de uso oficial antes de utilizá-lo).
-- Ambientes de CTF ou laboratórios de segurança criados especificamente
-  para prática (ex.: VMs vulneráveis próprias).
+- Your own virtual machines, on an isolated network (host-only/NAT).
+- Legitimate test targets maintained for educational purposes (e.g.,
+  `scanme.nmap.org`, which is publicly made available by the Nmap
+  maintainers specifically for light, respectful testing — always
+  check the official usage policy before using it).
+- CTF environments or security labs created specifically for practice
+  (e.g., your own vulnerable VMs).
 
-## Boas práticas durante os laboratórios
+## Best practices during the labs
 
-- Prefira scans com menor impacto quando o objetivo for apenas
-  aprendizado (evite `-T5`/timing agressivo sem necessidade).
-- Documente sempre o alvo, o horário e a justificativa do scan.
-- Evite scans que possam gerar negação de serviço (ex.: grandes volumes
-  de conexões simultâneas) contra sistemas com recursos limitados.
+- Prefer lower-impact scans when the goal is purely learning (avoid
+  `-T5`/aggressive timing unless necessary).
+- Always document the target, the time, and the justification for the
+  scan.
+- Avoid scans that could cause denial of service (e.g., large volumes
+  of simultaneous connections) against systems with limited resources.
 
-## Anonimização e proteção de dados
+## Anonymization and data protection
 
-- Antes de publicar qualquer saída de scan (`outputs/`) ou screenshot:
-  - Substitua IPs reais por endereços de documentação (`192.0.2.0/24`,
-    `198.51.100.0/24`, `203.0.113.0/24`, conforme RFC 5737) ou por faixas
-    privadas (`10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`).
-  - Remova hostnames, banners de serviço ou versões que possam
-    identificar um sistema real de terceiros.
-  - Revise a saída completa (incluindo banners de serviço, que podem
-    conter informações sensíveis) antes do commit.
-- Nunca publique resultados de scans realizados contra sistemas de
-  terceiros sem autorização explícita para divulgação.
+- Before publishing any scan output (`outputs/`) or screenshot:
+  - Replace real IPs with documentation addresses (`192.0.2.0/24`,
+    `198.51.100.0/24`, `203.0.113.0/24`, per RFC 5737) or private
+    ranges (`10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`).
+  - Remove hostnames, service banners, or versions that could identify
+    a real third-party system.
+  - Review the full output (including service banners, which may
+    contain sensitive information) before committing.
+- Never publish results of scans performed against third-party systems
+  without explicit authorization for disclosure.
 
-## Armazenamento seguro
+## Secure storage
 
-- Mantenha saídas brutas e não revisadas fora do controle de versão.
-- Apenas versione saídas já revisadas e anonimizadas, seguindo os
-  padrões definidos em [.gitignore](../../.gitignore).
+- Keep raw, unreviewed outputs out of version control.
+- Only version outputs that have already been reviewed and
+  anonymized, following the patterns defined in
+  [.gitignore](../../.gitignore).
 
-## Finalidade deste track
+## Purpose of this track
 
-Este track tem finalidade **exclusivamente educacional e defensiva**: o
-objetivo é compreender como técnicas de scanning funcionam, como se
-manifestam na rede e como podem ser detectadas e mitigadas — não realizar
-testes contra sistemas de terceiros sem autorização.
+This track has an **exclusively educational and defensive** purpose:
+the goal is to understand how scanning techniques work, how they show
+up on the network, and how they can be detected and mitigated — not to
+run tests against third-party systems without authorization.

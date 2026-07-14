@@ -1,79 +1,80 @@
-# Referência de Protocolos
+# Protocol Reference
 
-Resumo dos principais protocolos utilizados nos laboratórios deste
-repositório, com foco nos aspectos relevantes para análise de tráfego.
+Summary of the main protocols used in the labs in this repository,
+focused on the aspects relevant to traffic analysis.
 
 ## Ethernet
 
-Protocolo de camada de enlace responsável pelo endereçamento físico (MAC)
-e pelo encapsulamento de pacotes para transmissão em redes locais.
-Campos relevantes: endereço MAC de origem/destino, EtherType.
+Data link layer protocol responsible for physical addressing (MAC) and
+encapsulating packets for transmission on local networks. Relevant
+fields: source/destination MAC address, EtherType.
 
 ## ARP (Address Resolution Protocol)
 
-Protocolo utilizado para associar endereços IP a endereços MAC em uma
-rede local. Composto basicamente por requisições (*who-has*) e respostas
-(*is-at*). Frequentemente analisado em investigações de ARP spoofing.
+Protocol used to associate IP addresses with MAC addresses on a local
+network. Basically composed of requests (*who-has*) and replies
+(*is-at*). Frequently analyzed in ARP spoofing investigations.
 
 ## IPv4
 
-Protocolo de camada de rede responsável pelo endereçamento lógico e
-roteamento de pacotes. Campos relevantes: endereço IP de origem/destino,
-TTL, protocolo encapsulado, flags de fragmentação.
+Network layer protocol responsible for logical addressing and packet
+routing. Relevant fields: source/destination IP address, TTL,
+encapsulated protocol, fragmentation flags.
 
 ## IPv6
 
-Sucessor do IPv4, com espaço de endereçamento expandido (128 bits) e
-simplificação de alguns campos de cabeçalho. Utiliza endereços como
-`fe80::/10` (link-local) e prefixos globais roteáveis.
+Successor to IPv4, with an expanded address space (128 bits) and
+simplification of some header fields. Uses addresses such as
+`fe80::/10` (link-local) and routable global prefixes.
 
 ## ICMP (Internet Control Message Protocol)
 
-Protocolo utilizado para diagnóstico e relato de erros de rede (ex.:
-`ping`, mensagens de destino inalcançável, time exceeded). Não é orientado
-a conexão e não possui portas.
+Protocol used for network diagnostics and error reporting (e.g.,
+`ping`, destination unreachable messages, time exceeded). It is not
+connection-oriented and has no ports.
 
 ## TCP (Transmission Control Protocol)
 
-Protocolo de camada de transporte orientado a conexão, responsável por
-garantir entrega confiável e ordenada de dados. Utiliza o
-*three-way handshake* (SYN, SYN-ACK, ACK) para estabelecer conexões e
-possui mecanismos de controle de fluxo, retransmissão e encerramento
-gracioso (FIN) ou abrupto (RST).
+Connection-oriented transport layer protocol responsible for
+guaranteeing reliable, ordered data delivery. Uses the *three-way
+handshake* (SYN, SYN-ACK, ACK) to establish connections and has
+mechanisms for flow control, retransmission, and graceful (FIN) or
+abrupt (RST) termination.
 
 ## UDP (User Datagram Protocol)
 
-Protocolo de camada de transporte não orientado a conexão, mais simples e
-com menor overhead que o TCP. Não garante entrega, ordem ou controle de
-fluxo. Utilizado por protocolos como DNS e serviços sensíveis à latência.
+Connectionless transport layer protocol, simpler and with less
+overhead than TCP. Does not guarantee delivery, order, or flow
+control. Used by protocols such as DNS and latency-sensitive services.
 
 ## DNS (Domain Name System)
 
-Protocolo responsável pela resolução de nomes de domínio em endereços IP
-(e vice-versa). Opera tipicamente sobre UDP na porta 53 (com fallback
-para TCP em respostas maiores). Estrutura básica: consultas (queries) e
-respostas (responses), com diferentes tipos de registro (A, AAAA, CNAME,
-MX, entre outros) e códigos de retorno (ex.: `NOERROR`, `NXDOMAIN`).
+Protocol responsible for resolving domain names into IP addresses (and
+vice versa). Typically operates over UDP on port 53 (with fallback to
+TCP for larger responses). Basic structure: queries and responses,
+with different record types (A, AAAA, CNAME, MX, among others) and
+return codes (e.g., `NOERROR`, `NXDOMAIN`).
 
 ## HTTP (Hypertext Transfer Protocol)
 
-Protocolo de camada de aplicação utilizado para comunicação web, baseado
-em requisições e respostas. Opera tipicamente sobre a porta 80, em texto
-claro — por isso, credenciais e dados sensíveis nunca devem trafegar por
-HTTP sem criptografia (ver [Lab 04](../labs/04-http-traffic-analysis/README.md)).
+Application layer protocol used for web communication, based on
+requests and responses. Typically operates over port 80, in plain
+text — which is why credentials and sensitive data should never travel
+over HTTP without encryption (see
+[Lab 04](../labs/04-http-traffic-analysis/README.md)).
 
 ## HTTPS/TLS
 
-HTTPS é o HTTP operando sobre uma camada de criptografia TLS, tipicamente
-na porta 443. O TLS estabelece uma sessão criptografada por meio de um
-handshake (*Client Hello*, *Server Hello*, troca de certificados e chaves)
-antes da transmissão de dados da aplicação. Sem as chaves de sessão, o
-conteúdo da comunicação não é legível na captura — apenas os metadados do
-handshake.
+HTTPS is HTTP running over a TLS encryption layer, typically on port
+443. TLS establishes an encrypted session through a handshake (*Client
+Hello*, *Server Hello*, certificate and key exchange) before
+application data is transmitted. Without the session keys, the content
+of the communication is not readable in the capture — only the
+handshake metadata.
 
 ## DHCP (Dynamic Host Configuration Protocol)
 
-Protocolo utilizado para atribuição automática de endereços IP e outras
-configurações de rede a hosts em uma rede local. Segue tipicamente o fluxo
-*Discover, Offer, Request, Ack* (DORA), operando sobre UDP nas portas 67 e
-68.
+Protocol used for automatically assigning IP addresses and other
+network settings to hosts on a local network. Typically follows the
+*Discover, Offer, Request, Ack* (DORA) flow, operating over UDP on
+ports 67 and 68.

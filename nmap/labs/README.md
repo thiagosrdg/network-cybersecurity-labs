@@ -1,29 +1,30 @@
-# Laboratórios — Nmap
+# Labs — Nmap
 
-Este diretório reúne os laboratórios práticos de scanning e enumeração de
-rede com o Nmap. Cada laboratório segue a mesma estrutura de documentação,
-definida em [templates/lab-template.md](../templates/lab-template.md), e
-respeita as diretrizes de
+This directory brings together the hands-on network scanning and
+enumeration labs with Nmap. Each lab follows the same documentation
+structure, defined in
+[templates/lab-template.md](../templates/lab-template.md), and follows
+the guidelines in
 [docs/scanning-safety-and-ethics.md](../docs/scanning-safety-and-ethics.md).
 
-## Estrutura de cada laboratório
+## Structure of each lab
 
 ```text
-labs/NN-nome-do-laboratorio/
-├── README.md         # Documentação completa do laboratório
-├── outputs/            # Saídas do Nmap (-oN/-oX/-oG) anonimizadas
-└── screenshots/         # Evidências visuais anonimizadas
+labs/NN-lab-name/
+├── README.md         # Complete lab documentation
+├── outputs/            # Anonymized Nmap outputs (-oN/-oX/-oG)
+└── screenshots/         # Anonymized visual evidence
 ```
 
-Os diretórios `outputs/` e `screenshots/` contêm um arquivo `.gitkeep`
-enquanto não houver material real, para manter a estrutura versionada no
-Git.
+The `outputs/` and `screenshots/` directories contain a `.gitkeep`
+file while there is no real material yet, to keep the structure
+versioned in Git.
 
-## Lista de laboratórios
+## List of labs
 
-| # | Laboratório | Técnica/Tema | Status |
+| # | Lab | Technique/Topic | Status |
 |---|---|---|---|
-| 01 | [Host Discovery and Port Scanning](01-host-discovery-and-port-scanning/README.md) | Descoberta de hosts e varredura de portas | `Planned` |
+| 01 | [Host Discovery and Port Scanning](01-host-discovery-and-port-scanning/README.md) | Host discovery and port scanning | `Planned` |
 
-Antes de adicionar saídas de scan ou screenshots a qualquer laboratório,
-leia [docs/scanning-safety-and-ethics.md](../docs/scanning-safety-and-ethics.md).
+Before adding scan outputs or screenshots to any lab, read
+[docs/scanning-safety-and-ethics.md](../docs/scanning-safety-and-ethics.md).

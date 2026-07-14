@@ -1,28 +1,28 @@
 # Capture Filters vs Display Filters
 
-O Wireshark utiliza dois tipos distintos de filtros, com sintaxes e
-finalidades diferentes. Entender essa diferença é essencial antes de
-iniciar qualquer laboratório.
+Wireshark uses two distinct types of filters, with different syntax
+and purposes. Understanding this difference is essential before
+starting any lab.
 
-## Diferença conceitual
+## Conceptual difference
 
-| Aspecto | Capture Filter | Display Filter |
+| Aspect | Capture Filter | Display Filter |
 |---|---|---|
-| Quando é aplicado | Antes/durante a captura | Depois da captura, sobre os pacotes já capturados |
-| O que faz | Decide **quais pacotes são capturados** | Decide **quais pacotes já capturados são exibidos** |
-| Sintaxe | Baseada em BPF (Berkeley Packet Filter) | Sintaxe própria do Wireshark (mais rica e granular) |
-| Pode ser alterado depois? | Não — pacotes descartados na captura não podem ser recuperados | Sim — pode ser reaplicado quantas vezes for necessário |
-| Onde é configurado | Nas opções de captura, antes de iniciar | Na barra de filtros, a qualquer momento |
+| When applied | Before/during capture | After capture, on already-captured packets |
+| What it does | Decides **which packets are captured** | Decides **which already-captured packets are shown** |
+| Syntax | Based on BPF (Berkeley Packet Filter) | Wireshark's own syntax (richer and more granular) |
+| Can it be changed later? | No — packets discarded during capture cannot be recovered | Yes — can be reapplied as many times as needed |
+| Where it's configured | In the capture options, before starting | In the filter bar, at any time |
 
-Em resumo: **capture filters reduzem o volume de dados capturados**,
-enquanto **display filters ajudam a navegar e investigar** os dados já
-capturados. Em laboratórios de análise, é comum capturar de forma mais
-ampla e refinar a investigação com display filters (ver
+In short: **capture filters reduce the volume of captured data**,
+while **display filters help navigate and investigate** the data
+already captured. In analysis labs, it's common to capture more
+broadly and refine the investigation with display filters (see
 [wireshark-display-filters.md](wireshark-display-filters.md)).
 
-## Sintaxe de capture filters (BPF)
+## Capture filter syntax (BPF)
 
-Exemplos comuns:
+Common examples:
 
 ```text
 host 192.168.1.10
@@ -35,27 +35,29 @@ src host 192.168.1.10
 dst host 192.168.1.20
 ```
 
-### Explicação rápida
+### Quick explanation
 
-- `host 192.168.1.10` — captura todo o tráfego de/para o host informado.
-- `net 192.168.1.0/24` — captura todo o tráfego dentro da rede informada.
-- `port 53` — captura tráfego (TCP ou UDP) na porta 53 (DNS).
-- `tcp port 443` — captura apenas tráfego TCP na porta 443 (HTTPS).
-- `udp port 53` — captura apenas tráfego UDP na porta 53 (DNS).
-- `icmp` — captura apenas tráfego ICMP.
-- `src host 192.168.1.10` — captura tráfego cuja origem seja o host
-  informado.
-- `dst host 192.168.1.20` — captura tráfego cujo destino seja o host
-  informado.
+- `host 192.168.1.10` — captures all traffic to/from the given host.
+- `net 192.168.1.0/24` — captures all traffic within the given
+  network.
+- `port 53` — captures traffic (TCP or UDP) on port 53 (DNS).
+- `tcp port 443` — captures only TCP traffic on port 443 (HTTPS).
+- `udp port 53` — captures only UDP traffic on port 53 (DNS).
+- `icmp` — captures only ICMP traffic.
+- `src host 192.168.1.10` — captures traffic whose source is the given
+  host.
+- `dst host 192.168.1.20` — captures traffic whose destination is the
+  given host.
 
-## Boas práticas
+## Best practices
 
-- Utilize capture filters quando o volume de tráfego esperado for grande e
-  o foco da análise já for conhecido (ex.: capturar apenas tráfego DNS).
-- Evite capture filters excessivamente restritivos em laboratórios
-  exploratórios — pacotes descartados na captura são perdidos
-  definitivamente.
-- Para investigações amplas ou exploratórias, prefira capturar sem filtro
-  (ou com um filtro mínimo) e refinar a análise com display filters.
-- Documente sempre qual capture filter (se houver) foi utilizado, para
-  garantir a reprodutibilidade do laboratório.
+- Use capture filters when the expected traffic volume is large and
+  the focus of the analysis is already known (e.g., capturing only DNS
+  traffic).
+- Avoid overly restrictive capture filters in exploratory labs —
+  packets discarded during capture are permanently lost.
+- For broad or exploratory investigations, prefer capturing without a
+  filter (or with a minimal filter) and refining the analysis with
+  display filters.
+- Always document which capture filter (if any) was used, to ensure
+  the lab is reproducible.

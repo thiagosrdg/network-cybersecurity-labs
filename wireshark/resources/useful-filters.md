@@ -1,21 +1,21 @@
-# Filtros Úteis
+# Useful Filters
 
-Lista prática de filtros de exibição organizados por protocolo e
-finalidade, para consulta rápida durante os laboratórios. Para a
-explicação completa de cada categoria, veja
+Practical list of display filters organized by protocol and purpose,
+for quick reference during the labs. For the full explanation of each
+category, see
 [docs/wireshark-display-filters.md](../docs/wireshark-display-filters.md).
 
-## Diagnóstico geral
+## General diagnostics
 
 ```text
 ip.addr == 192.168.1.10
 tcp.port == 443
 udp.port == 53
 frame.len > 1500
-frame contains "erro"
+frame contains "error"
 ```
 
-## ICMP — conectividade e latência
+## ICMP — connectivity and latency
 
 ```text
 icmp
@@ -25,17 +25,17 @@ icmp.type == 3
 icmp.type == 11
 ```
 
-## DNS — resolução de nomes
+## DNS — name resolution
 
 ```text
 dns
 dns.flags.response == 0
 dns.flags.response == 1
-dns.qry.name == "exemplo.com"
+dns.qry.name == "example.com"
 dns.flags.rcode != 0
 ```
 
-## TCP — controle de conexão
+## TCP — connection control
 
 ```text
 tcp
@@ -49,7 +49,7 @@ tcp.analysis.duplicate_ack
 tcp.analysis.zero_window
 ```
 
-## HTTP — tráfego web não criptografado
+## HTTP — unencrypted web traffic
 
 ```text
 http
@@ -60,7 +60,7 @@ http.request.method == "POST"
 http.response.code >= 400
 ```
 
-## Investigação de tráfego suspeito
+## Suspicious traffic investigation
 
 ```text
 tcp.flags.reset == 1
@@ -71,12 +71,12 @@ tcp.port == 8080
 frame.len > 1500
 ```
 
-> Lembrete: portas incomuns, isoladamente, **não comprovam** atividade
-> maliciosa. Todo indicador deve ser analisado dentro do contexto da
-> comunicação observada (ver
+> Reminder: unusual ports, on their own, **do not prove** malicious
+> activity. Every indicator must be analyzed within the context of the
+> observed communication (see
 > [Lab 05](../labs/05-suspicious-traffic-analysis/README.md)).
 
-## Combinações úteis
+## Useful combinations
 
 ```text
 ip.addr == 192.168.1.10 && tcp.port == 443

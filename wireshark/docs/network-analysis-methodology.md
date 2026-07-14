@@ -1,86 +1,92 @@
-# Metodologia de Análise de Tráfego de Rede
+# Network Traffic Analysis Methodology
 
-Este documento descreve a metodologia utilizada em todos os laboratórios
-deste repositório para investigar capturas de tráfego de forma consistente,
-rastreável e defensável. A ideia é aplicar sempre a mesma sequência de
-etapas, adaptando o nível de profundidade ao objetivo de cada laboratório.
+This document describes the methodology used in all labs in this
+repository to investigate traffic captures consistently, traceably,
+and defensibly. The idea is to always apply the same sequence of
+steps, adapting the depth to the objective of each lab.
 
-## 1. Definir o objetivo da análise
+## 1. Define the objective of the analysis
 
-Antes de abrir qualquer captura, defina claramente:
+Before opening any capture, clearly define:
 
-- O que está sendo investigado (ex.: comportamento de um protocolo,
-  troubleshooting de conectividade, possível atividade suspeita).
-- Qual pergunta a análise deve responder.
-- Qual o escopo temporal e de hosts envolvidos.
+- What is being investigated (e.g., protocol behavior, connectivity
+  troubleshooting, possible suspicious activity).
+- What question the analysis should answer.
+- The time scope and hosts involved.
 
-Um objetivo bem definido evita análises genéricas e sem foco.
+A well-defined objective avoids generic, unfocused analyses.
 
-## 2. Validar a origem da captura
+## 2. Validate the origin of the capture
 
-- Confirme onde, quando e como a captura foi realizada.
-- Verifique se a captura foi feita em um ambiente autorizado e controlado.
-- Registre a interface de rede, o host de captura e o contexto (laboratório,
-  máquina virtual, rede isolada etc.).
+- Confirm where, when, and how the capture was performed.
+- Verify that the capture was made in an authorized, controlled
+  environment.
+- Record the network interface, capture host, and context (lab,
+  virtual machine, isolated network, etc.).
 
-## 3. Identificar hosts e protocolos predominantes
+## 3. Identify predominant hosts and protocols
 
-- Utilize estatísticas do Wireshark (ex.: *Statistics > Protocol
-  Hierarchy*, *Statistics > Conversations*) para obter uma visão geral.
-- Identifique os principais hosts de origem e destino.
-- Identifique os protocolos mais relevantes para o objetivo da análise.
+- Use Wireshark statistics (e.g., *Statistics > Protocol Hierarchy*,
+  *Statistics > Conversations*) to get an overview.
+- Identify the main source and destination hosts.
+- Identify the protocols most relevant to the objective of the
+  analysis.
 
-## 4. Estabelecer uma linha do tempo
+## 4. Establish a timeline
 
-- Ordene os eventos relevantes cronologicamente.
-- Identifique o início e o fim da comunicação analisada.
-- Observe picos de tráfego, intervalos incomuns ou eventos concentrados em
-  curtos períodos de tempo.
+- Order the relevant events chronologically.
+- Identify the start and end of the communication being analyzed.
+- Observe traffic spikes, unusual intervals, or events concentrated in
+  short time periods.
 
-## 5. Aplicar filtros progressivamente
+## 5. Apply filters progressively
 
-- Comece com filtros amplos (ex.: `ip.addr == x.x.x.x`) e vá refinando.
-- Combine filtros de forma incremental para isolar o tráfego relevante.
-- Documente os filtros utilizados a cada etapa (ver
+- Start with broad filters (e.g., `ip.addr == x.x.x.x`) and refine
+  from there.
+- Combine filters incrementally to isolate relevant traffic.
+- Document the filters used at each step (see
   [wireshark-display-filters.md](wireshark-display-filters.md)).
 
-## 6. Identificar anomalias
+## 6. Identify anomalies
 
-- Compare o tráfego observado com o comportamento esperado do protocolo.
-- Procure por retransmissões, resets inesperados, códigos de erro,
-  latências anormais ou padrões de tráfego incomuns.
-- Evite tirar conclusões precipitadas: uma anomalia é um ponto de atenção,
-  não uma prova definitiva.
+- Compare the observed traffic with the expected behavior of the
+  protocol.
+- Look for retransmissions, unexpected resets, error codes, abnormal
+  latency, or unusual traffic patterns.
+- Avoid jumping to conclusions: an anomaly is a point of attention, not
+  definitive proof.
 
-## 7. Validar hipóteses
+## 7. Validate hypotheses
 
-- Para cada anomalia observada, formule uma hipótese explicável.
-- Busque evidências adicionais na própria captura (ou em capturas
-  complementares) que confirmem ou refutem a hipótese.
-- Quando não houver evidência suficiente, registre a hipótese como
-  **não confirmada**, em vez de apresentá-la como conclusão.
+- For each observed anomaly, formulate an explainable hypothesis.
+- Look for additional evidence in the capture itself (or in
+  complementary captures) that confirms or refutes the hypothesis.
+- When there isn't enough evidence, record the hypothesis as
+  **unconfirmed**, rather than presenting it as a conclusion.
 
-## 8. Registrar evidências
+## 8. Record evidence
 
-- Salve screenshots relevantes dos pacotes analisados.
-- Referencie números de frame, timestamps e filtros aplicados.
-- Mantenha rastreabilidade entre a evidência e a conclusão associada a ela.
+- Save relevant screenshots of the analyzed packets.
+- Reference frame numbers, timestamps, and applied filters.
+- Maintain traceability between the evidence and the conclusion
+  associated with it.
 
-## 9. Proteger dados sensíveis
+## 9. Protect sensitive data
 
-- Antes de documentar ou publicar qualquer evidência, aplique as
-  orientações de [packet-capture-safety.md](packet-capture-safety.md).
-- Anonimize IPs, MACs, hostnames, nomes de usuário e qualquer dado que
-  possa identificar pessoas ou sistemas reais.
+- Before documenting or publishing any evidence, apply the guidelines
+  in [packet-capture-safety.md](packet-capture-safety.md).
+- Anonymize IPs, MACs, hostnames, usernames, and any data that could
+  identify real people or systems.
 
-## 10. Documentar conclusões e limitações
+## 10. Document conclusions and limitations
 
-- Separe claramente **fatos observados** de **hipóteses** e **inferências**.
-- Descreva as limitações da análise (ex.: captura parcial, ausência de
-  contexto, falta de logs complementares).
-- Inclua recomendações práticas quando aplicável (mitigação,
-  troubleshooting, próximos passos de investigação).
+- Clearly separate **observed facts** from **hypotheses** and
+  **inferences**.
+- Describe the limitations of the analysis (e.g., partial capture,
+  lack of context, missing complementary logs).
+- Include practical recommendations when applicable (mitigation,
+  troubleshooting, next investigation steps).
 
-Esta metodologia é utilizada de forma consistente em todos os laboratórios
-deste repositório e serve como base para o
-[template de análise de incidentes](../templates/incident-analysis-template.md).
+This methodology is used consistently across all labs in this
+repository and serves as the basis for the
+[incident analysis template](../templates/incident-analysis-template.md).

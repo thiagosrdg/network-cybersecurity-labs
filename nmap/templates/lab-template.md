@@ -1,76 +1,76 @@
-# Lab XX: Nome do laboratório
+# Lab XX: Lab name
 
 ## Status
 
 Planned
 
-## Objetivo
+## Objective
 
-Descreva o objetivo técnico do laboratório.
+Describe the technical objective of the lab.
 
-## Conceitos abordados
+## Concepts covered
 
-Liste as técnicas de scanning, opções do Nmap e conceitos relacionados
-(ex.: host discovery, TCP connect scan, SYN scan, detecção de
-versão/serviço, detecção de sistema operacional, NSE).
+List the scanning techniques, Nmap options, and related concepts
+(e.g., host discovery, TCP connect scan, SYN scan, service/version
+detection, operating system detection, NSE).
 
-## Ambiente
+## Environment
 
-- Sistema operacional (host de scanning):
-- Versão do Nmap:
-- Alvo(s) do scan (ambiente próprio/autorizado):
-- Topologia:
-- Máquinas virtuais:
-- Ferramentas auxiliares:
+- Operating system (scanning host):
+- Nmap version:
+- Scan target(s) (owned/authorized environment):
+- Topology:
+- Virtual machines:
+- Auxiliary tools:
 
-## Autorização
+## Authorization
 
-Confirme explicitamente que o alvo do scan é um ambiente próprio ou
-possui autorização documentada para a realização do teste (ver
+Explicitly confirm that the scan target is an owned environment or has
+documented authorization for the test (see
 [docs/scanning-safety-and-ethics.md](../docs/scanning-safety-and-ethics.md)).
 
-## Cenário
+## Scenario
 
-Explique o cenário utilizado para gerar o tráfego de scanning.
+Explain the scenario used to generate the scanning traffic.
 
-## Procedimento
+## Procedure
 
-Descreva os passos executados no laboratório.
+Describe the steps performed in the lab.
 
-## Comandos utilizados
+## Commands used
 
 ```text
-Adicionar os comandos nmap utilizados aqui, com as flags explicadas.
+Add the nmap commands used here, with the flags explained.
 ```
 
-## Análise dos resultados
+## Result analysis
 
-Documente as portas, serviços, versões e demais informações relevantes
-identificadas na saída do Nmap.
+Document the ports, services, versions, and other relevant information
+identified in the Nmap output.
 
-## Evidências
+## Evidence
 
-Adicione screenshots anonimizadas e referências aos arquivos de saída
-(`outputs/`), quando aplicável.
+Add anonymized screenshots and references to output files
+(`outputs/`), when applicable.
 
-## Principais descobertas
+## Key findings
 
-Liste as conclusões técnicas obtidas durante a análise.
+List the technical conclusions obtained during the analysis.
 
-## Indicadores de comportamento suspeito
+## Indicators of suspicious behavior
 
-Descreva possíveis anomalias, quando aplicável (ex.: serviços
-inesperados, portas abertas fora do padrão).
+Describe possible anomalies, when applicable (e.g., unexpected
+services, ports open outside the norm).
 
-## Mitigações ou recomendações
+## Mitigations or recommendations
 
-Adicione recomendações de segurança (ex.: fechamento de portas
-desnecessárias, atualização de serviços vulneráveis), quando aplicável.
+Add security recommendations (e.g., closing unnecessary ports,
+updating vulnerable services), when applicable.
 
-## Conclusão
+## Conclusion
 
-Resuma os principais aprendizados do laboratório.
+Summarize the main lessons learned from the lab.
 
-## Referências
+## References
 
-Liste documentação oficial, RFCs e materiais utilizados.
+List official documentation, RFCs, and materials used.
