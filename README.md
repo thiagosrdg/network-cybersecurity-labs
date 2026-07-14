@@ -34,9 +34,6 @@ reproducibly — always in owned or explicitly authorized environments.
 | [nmap/](nmap/README.md) | Nmap | Network discovery, port scanning, and service enumeration | `Planned` |
 | [tcpdump/](tcpdump/README.md) | tcpdump | Command-line packet capture and BPF filters | `Planned` |
 
-New tracks can be added at any time — just create a new folder at the
-root of the repository (e.g., `zeek/`, `log-analysis/`) following the
-same organization pattern described below.
 
 ## Repository structure
 
@@ -111,28 +108,17 @@ type of evidence analyzed, but all of them share the same principles:
 8. Protect sensitive data before any publication.
 9. Document conclusions, limitations, and recommendations.
 
-See the detailed methodology for each track in
-[wireshark/docs/network-analysis-methodology.md](wireshark/docs/network-analysis-methodology.md).
-
 ## Ethical and legal notice
 
 > ⚠️ **Important notice**
 >
 > All labs in this repository — traffic capture, port scanning, or any
 > other technique — must be performed **only in owned or explicitly
-> authorized environments**. Capturing traffic from or scanning
-> third-party networks, systems, or devices without authorization may
-> violate local laws and acceptable use policies.
+> authorized environments**. 
 >
 > This repository has an **exclusively educational and defensive**
 > purpose. None of the labs documented here are intended to compromise
 > third-party systems.
->
-> Each track has its own specific ethical notice and detailed
-> anonymization guidelines — see:
-> - [wireshark/docs/packet-capture-safety.md](wireshark/docs/packet-capture-safety.md)
-> - [nmap/docs/scanning-safety-and-ethics.md](nmap/docs/scanning-safety-and-ethics.md)
-> - [tcpdump/docs/packet-capture-safety.md](tcpdump/docs/packet-capture-safety.md)
 
 ## Instructions to run or reproduce the labs
 
@@ -147,15 +133,6 @@ See the detailed methodology for each track in
    the content according to the respective track's security
    guidelines.
 
-## Progress
-
-This repository is in the structuring phase. The `wireshark/` track has
-the base documentation for five labs created, still **with no real
-captures or results recorded**. The `nmap/` and `tcpdump/` tracks were
-just created, each with the base structure and one initial lab
-planned. The progress of each lab is tracked via the `Status` field in
-its respective `README.md`.
-
 ## Next steps
 
 - Run and document the first real labs in `wireshark/`, `nmap/`, and
@@ -164,8 +141,6 @@ its respective `README.md`.
   detection, and NSE labs.
 - Expand the `tcpdump/` track with remote/SSH captures and rotating
   capture files.
-- Consider creating new tracks (e.g., `zeek/`, `log-analysis/`) as new
-  labs are performed.
 
 ## Commit convention
 
@@ -180,15 +155,6 @@ fix: correct TCP filter example
 refactor: reorganize lab structure
 chore: update repository metadata
 ```
-
-## Contact and professional profile
-
-- GitHub: [thiagosrdg](https://github.com/thiagosrdg)
-- LinkedIn: `<add LinkedIn link>`
-- Contact e-mail: `<add professional contact e-mail>`
-
 ---
 
-*This is a personal study project in networking and cybersecurity.
-Suggestions and technical corrections are welcome — see
-[CONTRIBUTING.md](CONTRIBUTING.md).*
+*This is a personal study project in networking and cybersecurity.*
