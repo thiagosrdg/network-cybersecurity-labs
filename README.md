@@ -1,9 +1,5 @@
 # Network & Cybersecurity Labs
 
-![Status](https://img.shields.io/badge/status-in%20progress-yellow)
-![Focus](https://img.shields.io/badge/focus-cybersecurity-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-
 ## Description
 
 This repository brings together hands-on **network and cybersecurity
