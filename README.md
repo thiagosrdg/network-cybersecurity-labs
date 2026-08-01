@@ -29,6 +29,7 @@ reproducibly — always in owned or explicitly authorized environments.
 | [wireshark/](wireshark/README.md) | Wireshark | Network traffic analysis, protocols, and packet investigation | `In progress` |
 | [nmap/](nmap/README.md) | Nmap | Network discovery, port scanning, and service enumeration | `Planned` |
 | [tcpdump/](tcpdump/README.md) | tcpdump | Command-line packet capture and BPF filters | `Planned` |
+| [packet-tracer/](packet-tracer/README.md) | Cisco Packet Tracer | Network design, Cisco IOS configuration, and troubleshooting | `Planned` |
 
 
 ## Repository structure
@@ -50,7 +51,13 @@ network-cybersecurity-labs/
 │   ├── labs/
 │   ├── templates/
 │   └── resources/
-└── tcpdump/                 # Command-line capture track with tcpdump
+├── tcpdump/                 # Command-line capture track with tcpdump
+│   ├── README.md
+│   ├── docs/
+│   ├── labs/
+│   ├── templates/
+│   └── resources/
+└── packet-tracer/           # Network design and configuration track with Cisco Packet Tracer
     ├── README.md
     ├── docs/
     ├── labs/
@@ -80,6 +87,8 @@ tracks.
 - Use of capture filters and display filters in Wireshark.
 - Command-line packet capture and BPF filters with tcpdump.
 - Network reconnaissance and service enumeration with Nmap.
+- Network design, Cisco IOS configuration, and troubleshooting with
+  Cisco Packet Tracer.
 - Network troubleshooting from technical evidence.
 - Initial identification of suspicious traffic and indicators of
   compromise.
@@ -128,7 +137,8 @@ detail — report it privately to the maintainer instead.
 
 ## Instructions to run or reproduce the labs
 
-1. Choose the desired track (`wireshark/`, `nmap/`, or `tcpdump/`).
+1. Choose the desired track (`wireshark/`, `nmap/`, `tcpdump/`, or
+   `packet-tracer/`).
 2. Read the track's `README.md` to understand objectives and
    prerequisites.
 3. Set up an isolated environment you own (virtual machine or virtual
@@ -147,6 +157,8 @@ detail — report it privately to the maintainer instead.
   detection, and NSE labs.
 - Expand the `tcpdump/` track with remote/SSH captures and rotating
   capture files.
+- Run and document the first labs in `packet-tracer/`, then expand it
+  with VLANs/trunking, dynamic routing, ACLs, and NAT labs.
 
 ## Commit convention
 

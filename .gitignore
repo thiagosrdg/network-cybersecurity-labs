@@ -39,3 +39,10 @@ captures/raw/
 *.sensitive.xml
 *.sensitive.gnmap
 outputs/raw/
+
+# Large or sensitive topology files (packet-tracer/ track)
+# The same principle applies to labs/**/topologies/: only reviewed
+# topology files without sensitive/real-world data should be versioned.
+*.private.pkt
+*.sensitive.pkt
+topologies/raw/
